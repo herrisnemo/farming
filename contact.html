@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Executive Directory — RiseUp Farms</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="contact-page">
+  
+  <header class="navbar-split">
+    <div class="nav-top container">
+      <div class="nav-left">
+        <button id="mobile-menu-toggle" class="icon hamburger" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+        <button id="search-toggle" class="icon" aria-label="Search">
+            <img src="https://img.icons8.com/ios/50/D4AF37/search--v1.png" alt="Search" class="nav-icon-svg">
+        </button> 
+      </div>
+      
+      <div class="nav-center-logo">
+        <a href="index.html" aria-label="Go to homepage">
+            <img src="logo rise.png" alt="RiseUp Farms" class="logo-img">
+        </a>
+      </div>
+
+      <div class="nav-right">
+        <div class="mode-toggle">
+            <button id="mode-switch" aria-label="Toggle dark/light mode">
+            <img src="https://img.icons8.com/ios/50/D4AF37/moon-symbol.png" alt="Mode" class="nav-icon-svg">
+            </button>
+        </div>
+        <button class="icon" aria-label="Account">
+            <img src="https://img.icons8.com/ios/50/D4AF37/user-male-circle.png" alt="Account" class="nav-icon-svg">
+        </button>
+        <button class="icon" aria-label="Cart">
+            <img src="https://img.icons8.com/ios/50/D4AF37/shopping-bag.png" alt="Cart" class="nav-icon-svg">
+        </button>
+      </div>
+    </div>
+
+    <nav class="nav-bottom">
+      <ul class="nav-links-centered">
+        <li class="nav-item has-dropdown"><a href="index.html#grow">GROW ▾</a>
+          <div class="dropdown-menu">
+            <a href="index.html#greenhouse">Greenhouse</a>
+            <a href="index.html#orchard">Orchard</a>
+            <a href="index.html#hydroponics">Hydroponics</a>
+          </div>
+        </li>
+        <li class="nav-item has-dropdown"><a href="index.html#products">PRODUCTS ▾</a>
+          <div class="dropdown-menu">
+            <a href="index.html#featured">Featured Produce</a>
+            <a href="index.html#maison">Maison</a>
+            <a href="index.html#shop">Shop All</a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="index.html#maison">MAISON</a></li>
+        <li class="nav-item has-dropdown">
+            <a href="about.html" class="nav-link dropdown-toggle" id="about-dropdown-toggle">ABOUT ▾</a>
+            <div class="dropdown-menu">
+              <a href="about.html#story" class="dropdown-item">Our Story</a>
+              <a href="about.html#values" class="dropdown-item">Core Values</a>
+              <a href="contact.html#team" class="dropdown-item">Our Team</a>
+              <a href="contact.html" class="dropdown-item">Contact</a>
+            </div>
+        </li>
+        <li class="nav-item"><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- FIXED: Removed broken comment tag -->
+  <<!-- MOBILE SLIDE MENU - Replace in ALL HTML files -->
+<div id="slide-menu" class="slide-menu" aria-hidden="true">
+  <div class="slide-menu-header">
+    <div id="mobile-mode-switch" class="mode-toggle" aria-label="Toggle mobile dark/light">🌙</div>
+    <button id="mobile-search-toggle" class="icon" aria-label="Open mobile search">🔍</button>
+    <button id="mobile-slide-close" class="icon" aria-label="Close menu">&times;</button>
+  </div>
+
+  <ul class="slide-nav-links">
+    <!-- Regular clickable links -->
+    <li>
+      <a href="index.html" class="mobile-nav-link">HOME</a>
+    </li>
+    
+    <li>
+      <a href="index.html#grow" class="mobile-nav-link">GROW</a>
+    </li>
+    
+    <li>
+      <a href="index.html#products" class="mobile-nav-link">PRODUCTS</a>
+    </li>
+    
+    <li>
+      <a href="index.html#maison" class="mobile-nav-link">MAISON</a>
+    </li>
+    
+    <!-- Dropdown with clickable parent link -->
+    <li class="mobile-has-dropdown">
+      <div class="mobile-dropdown-header">
+        <a href="about.html" class="slide-menu-link">ABOUT</a>
+        <button class="mobile-dropdown-btn" aria-expanded="false" aria-controls="about-mobile-submenu">
+          <span class="dropdown-arrow"></span>
+        </button>
+      </div>
+      <ul class="mobile-dropdown-menu" id="about-mobile-submenu" aria-hidden="true">
+        <li><a href="about.html#story" class="slide-menu-link">Our Story</a></li>
+        <li><a href="about.html#values" class="slide-menu-link">Core Values</a></li>
+        <li><a href="contact.html#team" class="slide-menu-link">Our Team</a></li>
+        <li><a href="contact.html" class="slide-menu-link">Contact</a></li>
+      </ul>
+    </li>
+    
+    <li>
+      <a href="contact.html" class="mobile-nav-link">CONTACT</a>
+    </li>
+  </ul>
+</div>
+
+  <main class="container section-padding">
+    <div class="center-text fade-in" style="text-align: center; margin-bottom: 60px; margin-top: 80px;">
+        <h1 class="hero-title">Executive <span class="accent">Directory</span></h1>
+        <p class="section-subtitle">Meet Our Young Leadership Team (Class of 2025)</p>
+    </div>
+
+    <div class="team-grid">
+      
+      <!-- Zoe Kulondi -->
+      <a href="profile-zoe.html" class="team-card glass-panel fade-in">
+        <div class="team-img-placeholder">
+          <img src="team-zoe.jpg" alt="Zoe Kulondi" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x500/0f1a13/D4AF37?text=Zoe+Kulondi'">
+        </div>
+        <h3>Zoe Kulondi</h3>
+        <p class="role">Managing Director (MD)</p>
+      </a>
+
+      <!-- Shaun Nanasele -->
+      <a href="profile-shaun.html" class="team-card glass-panel fade-in">
+        <div class="team-img-placeholder">
+          <img src="team-shaun.jpg" alt="Shaun Nanasele" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x500/0f1a13/D4AF37?text=Shaun+Nanasele'">
+        </div>
+        <h3>Shaun Nanasele</h3>
+        <p class="role">Operations Director (OD)</p>
+      </a>
+
+      <!-- Joshua Musandririe -->
+      <a href="profile-joshua.html" class="team-card glass-panel fade-in">
+        <div class="team-img-placeholder">
+          <img src="team-joshua.jpg" alt="Joshua Musandririe" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x500/0f1a13/D4AF37?text=Joshua+Musandririe'">
+        </div>
+        <h3>Joshua Musandririe</h3>
+        <p class="role">Finance Officer (FAO)</p>
+      </a>
+
+      <!-- Deneo Msthali -->
+      <a href="profile-deneo.html" class="team-card glass-panel fade-in">
+        <div class="team-img-placeholder">
+          <img src="team-deneo.jpg" alt="Deneo Msthali" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x500/0f1a13/D4AF37?text=Deneo+Msthali'">
+        </div>
+        <h3>Deneo Msthali</h3>
+        <p class="role">Marketing Officer (MCRO)</p>
+      </a>
+
+      <!-- Owethu Mahlobo -->
+      <a href="profile-owethu.html" class="team-card glass-panel fade-in">
+        <div class="team-img-placeholder">
+          <img src="team-owethu.jpg" alt="Owethu Mahlobo" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x500/0f1a13/D4AF37?text=Owethu+Mahlobo'">
+        </div>
+        <h3>Owethu Mahlobo</h3>
+        <p class="role">Agri Production (APO)</p>
+      </a>
+
+      <!-- Harris -->
+      <a href="profile-harris.html" class="team-card glass-panel fade-in">
+        <div class="team-img-placeholder">
+          <img src="20251222_100239.jpg" alt="Harris" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x500/0f1a13/D4AF37?text=Harris'">
+        </div>
+        <h3>Harris</h3>
+        <p class="role">IT Director (ITD)</p>
+      </a>
+
+      <!-- Innocent Raddebe -->
+      <a href="profile-innocent.html" class="team-card glass-panel fade-in">
+        <div class="team-img-placeholder">
+          <img src="team-innocent.jpg" alt="Innocent Raddebe" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x500/0f1a13/D4AF37?text=Innocent+Raddebe'">
+        </div>
+        <h3>Innocent Raddebe</h3>
+        <p class="role">Risk Officer</p>
+      </a>
+
+    </div>
+    <section class="section-padding fade-in" id="contact-info">
+  <div class="container" style="max-width: 900px;">
+
+    <div class="center-text" style="text-align:center; margin-bottom: 50px;">
+      <h2 class="section-title">Get in Touch with <span class="accent">RiseUp Farms</span></h2>
+      <p class="section-subtitle">
+        Delivering fresh agricultural produce and driving farming innovation.
+        <br><br>
+        Whether you’re interested in our sustainable produce, farming practices,
+        or youth development initiatives, our team is ready to assist.
+      </p>
+    </div>
+
+    <div class="glass-panel" style="padding: 40px;">
+
+      <h3 style="margin-bottom: 20px;">Send Us a Message</h3>
+      <p class="muted" style="margin-bottom: 30px;">
+        Complete the form below and a member of our team will respond shortly.
+      </p>
+
+      <form class="contact-form">
+        
+        <label>
+          Full Name <span class="muted">(required)</span>
+          <input type="text" placeholder="Your full name" required>
+        </label>
+
+        <label>
+          Email Address <span class="muted">(required)</span>
+          <input type="email" placeholder="your.email@example.com" required>
+        </label>
+
+        <label>
+          Message <span class="muted">(required)</span>
+          <textarea rows="5" placeholder="Tell us about your inquiry, order, or partnership request..." required></textarea>
+        </label>
+
+        <p class="muted" style="font-size: 0.85rem; margin-top: 10px;">
+          Please do not share sensitive information such as passwords or credit card details.
+          This form is intended for general inquiries only.
+        </p>
+
+        <button type="submit" class="pill-btn" style="margin-top: 20px;">
+          Send Message
+        </button>
+
+      </form>
+    </div>
+
+    <div class="glass-panel" style="padding: 40px; margin-top: 40px;">
+      <h3 style="margin-bottom: 20px;">Contact Information</h3>
+
+      <p>
+        📧 <strong>Email</strong><br>
+        <a href="mailto:operationsdirector@riseupfarms.xyz">
+          operationsdirector@riseupfarms.xyz
+        </a><br>
+        <span class="muted">For inquiries, orders, and partnership opportunities.</span>
+      </p>
+
+      <br>
+
+      <p>
+        📞 <strong>Phone</strong><br>
+        <a href="tel:0826121932">082 612 1932</a><br>
+        <span class="muted">Available during business hours for immediate assistance.</span>
+      </p>
+
+      <br>
+
+      <p>
+        ⏰ <strong>Response Time</strong><br>
+        <span class="muted">
+          We typically respond within 24–48 hours. For urgent matters, please contact us by phone.
+        </span>
+      </p>
+
+      <br>
+
+      <p>
+        🕒 <strong>Business Hours</strong><br>
+        Monday – Friday: 8:00 AM – 5:00 PM (SAST)<br>
+        Saturday: 9:00 AM – 2:00 PM (SAST)<br>
+        Sunday: Closed
+      </p>
+    </div>
+
+  </div>
+</section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container container">
+      <div class="footer-col">
+        <h4>Collections</h4>
+        <ul>
+          <li><a href="index.html#products">Produce</a></li>
+          <li><a href="index.html#maison">Maison</a></li>
+          <li><a href="index.html#shop">Shop</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Info</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="about.html#values">Sustainability</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>RiseUp</h4>
+        <ul>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Invest</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Stay Connected</h4>
+        <p class="newsletter-text">Get field notes and early drops.</p>
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" name="email" placeholder="Email address" aria-label="Email">
+          <button type="submit">JOIN</button>
+        </form>
+        <div class="social-links">
+          <a href="https://instagram.com/riseupfarms" target="_blank" aria-label="Instagram">
+            <img src="https://img.icons8.com/ios-filled/50/D4AF37/instagram-new.png" alt="Instagram" class="social-icon">
+          </a>
+          <a href="https://tiktok.com/@riseupfarms" target="_blank" aria-label="TikTok">
+            <img src="https://img.icons8.com/ios-filled/50/D4AF37/tiktok.png" alt="TikTok" class="social-icon">
+          </a>
+          <a href="https://facebook.com/riseupfarms" target="_blank" aria-label="Facebook">
+            <img src="https://img.icons8.com/ios-filled/50/D4AF37/facebook-f.png" alt="Facebook" class="social-icon">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 RiseUp Farms. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

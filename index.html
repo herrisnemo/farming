@@ -17,7 +17,8 @@
           
           <div class="search-input-area">
               <form class="search-bar-form" onsubmit="event.preventDefault();">
-                  <button type="submit" class="icon" aria-label="Submit Search">🔍</button>
+                  <button type="submit" class="icon" aria-label="Submit Search">
+                    <img src="https://img.icons8.com/ios/50/D4AF37/search--v1.png" alt="Search" class="nav-icon-svg"></button>
                   <input type="text" id="overlay-search-input" placeholder="Search RiseUp Farms..." autocomplete="off">
               </form>
               
@@ -37,13 +38,14 @@
   </div>
     <div class="nav-top container">
       <div class="nav-left">
-        <button id="mobile-menu-toggle" class="icon hamburger" aria-label="Open menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <button id="search-toggle" class="icon" aria-label="Search">🔍</button> 
-      </div>
+  <button id="mobile-menu-toggle" class="icon hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+  <button id="search-toggle" class="icon" aria-label="Search">
+    <img src="https://img.icons8.com/ios/50/D4AF37/search--v1.png" alt="Search" class="nav-icon-svg">
+  </button> 
+</div>
+
     
    
       <div class="nav-center-logo">
@@ -53,33 +55,51 @@
       </div>
   
       <div class="nav-right">
-        <div class="mode-toggle">
-          <button id="mode-switch" aria-label="Toggle dark/light mode">🌙</button>
-        </div>
-        
-        <button class="icon" aria-label="Account">👤</button>
-        <button class="icon" aria-label="Cart">🧺</button>
-      </div>
-    </div>
+  <div class="mode-toggle">
+    <button id="mode-switch" aria-label="Toggle dark/light mode">
+      <img src="https://img.icons8.com/ios/50/D4AF37/moon-symbol.png" alt="Mode" class="nav-icon-svg">
+    </button>
+  </div>
+  <button class="icon" aria-label="Account">
+    <img src="https://img.icons8.com/ios/50/D4AF37/user-male-circle.png" alt="Account" class="nav-icon-svg">
+  </button>
+  <button class="icon" aria-label="Cart">
+    <img src="https://img.icons8.com/ios/50/D4AF37/shopping-bag.png" alt="Cart" class="nav-icon-svg">
+  </button>
+</div>
+
   
     <nav class="nav-bottom">
       <ul class="nav-links-centered">
-        <li class="nav-item has-dropdown"><a href="#grow">GROW</a>
+        <li class="nav-item has-dropdown"><a href="#grow">GROW ▾</a>
           <div class="dropdown-menu" aria-hidden="true">
             <a href="#greenhouse">Greenhouse</a>
             <a href="#orchard">Orchard</a>
             <a href="#hydroponics">Hydroponics</a>
           </div>
         </li>
-        <li class="nav-item has-dropdown"><a href="#products">PRODUCTS</a>
+        <li class="nav-item has-dropdown"><a href="#products">PRODUCTS ▾</a>
           <div class="dropdown-menu">
             <a href="#featured">Featured Produce</a>
             <a href="#maison">Maison</a>
             <a href="#shop">Shop All</a>
           </div>
         </li>
+        
+        <li class="nav-item has-dropdown">
+  <a href="about.html" class="nav-link dropdown-toggle">ABOUT ▾</a>
+  
+  <div class="dropdown-menu">
+    <a href="about.html#story">Our Story</a>
+    <a href="about.html#values">Core Values</a>
+    <a href="contact.html#team">Our Team</a> 
+    <a href="contact.html">Contact</a>
+  </div>
+</li>
+
+        
         <li class="nav-item"><a href="#maison">MAISON</a></li>
-        <li class="nav-item has-dropdown"><a href="#about">ABOUT</a>
+       <li class="nav-item has-dropdown">
           <div class="dropdown-menu">
             <a href="#story">Our Story</a>
             <a href="#sustainability">Sustainability</a>
@@ -90,17 +110,55 @@
       </ul>
     </nav>
   </header>
-  
-  <div id="slide-menu">
-    <ul class="slide-menu-links">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#grow">Grow</a></li>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#maison">Maison</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+<!-- MOBILE SLIDE MENU - Replace in ALL HTML files -->
+<div id="slide-menu" class="slide-menu" aria-hidden="true">
+  <div class="slide-menu-header">
+    <div id="mobile-mode-switch" class="mode-toggle" aria-label="Toggle mobile dark/light">🌙</div>
+    <button id="mobile-search-toggle" class="icon" aria-label="Open mobile search">🔍</button>
+    <button id="mobile-slide-close" class="icon" aria-label="Close menu">&times;</button>
   </div>
+
+  <ul class="slide-nav-links">
+    <!-- Regular clickable links -->
+    <li>
+      <a href="index.html" class="mobile-nav-link">HOME</a>
+    </li>
+    
+    <li>
+      <a href="index.html#grow" class="mobile-nav-link">GROW</a>
+    </li>
+    
+    <li>
+      <a href="index.html#products" class="mobile-nav-link">PRODUCTS</a>
+    </li>
+    
+    <li>
+      <a href="index.html#maison" class="mobile-nav-link">MAISON</a>
+    </li>
+    
+    <!-- Dropdown with clickable parent link -->
+    <li class="mobile-has-dropdown">
+      <div class="mobile-dropdown-header">
+        <a href="about.html" class="slide-menu-link">ABOUT</a>
+        <button class="mobile-dropdown-btn" aria-expanded="false" aria-controls="about-mobile-submenu">
+          <span class="dropdown-arrow"></span>
+        </button>
+      </div>
+      <ul class="mobile-dropdown-menu" id="about-mobile-submenu" aria-hidden="true">
+        <li><a href="about.html#story" class="slide-menu-link">Our Story</a></li>
+        <li><a href="about.html#values" class="slide-menu-link">Core Values</a></li>
+        <li><a href="contact.html#team" class="slide-menu-link">Our Team</a></li>
+        <li><a href="contact.html" class="slide-menu-link">Contact</a></li>
+      </ul>
+    </li>
+    
+    <li>
+      <a href="contact.html" class="mobile-nav-link">CONTACT</a>
+    </li>
+  </ul>
+</div>
+<!-- END: Mobile slide menu -->
+
 
 
 <section class="hero-full" id="hero" aria-label="Hero — RiseUp Farms">
@@ -122,47 +180,53 @@
 </section>
 
 
-  <section class="featured section-padding fade-right" id="products">
-    <h2 class="section-title">Featured Produce</h2>
-    <div class="featured-grid stagger">
-      <article class="featured-card">
-        <div class="featured-img"><img src="harvestboxes.jpg" alt="Harvest box"></div>
-        <h3>Harvest Boxes</h3>
-        <p class="muted">Seasonal curated produce</p>
-      </article>
+<section class="featured section-padding fade-right" id="products">
+  <h2 class="section-title">Featured Produce</h2>
 
-      <article class="featured-card">
-        <div class="featured-img"><img src="Microgreenss.jpg" alt="Microgreens"></div>
-        <h3>Microgreens</h3>
-        <p class="muted">Ultra-fresh microbatches</p>
-      </article>
+  <div class="featured-produce-slider">
+      <div class="featured-produce-track">
 
-      <article class="featured-card">
-        <div class="featured-img"><img src="oil.jpg" alt="Cold-pressed oil"></div>
-        <h3>Cold-Pressed Oil</h3>
-        <p class="muted">Single-estate, small press</p>
-      </article>
-      
-      <article class="featured-card">
-        <div class="featured-img"><img src="tomatoes.jpg" alt="Heirloom Tomatoes"></div>
-        <h3>Heirloom Tomatoes</h3>
-        <p class="muted">Limited summer edition</p>
-      </article>
+          <article class="featured-card">
+              <div class="featured-img"><img src="harvestboxes.jpg" alt="Harvest box"></div>
+              <h3>Harvest Boxes</h3>
+              <p class="muted">Seasonal curated produce</p>
+          </article>
 
-      <article class="featured-card">
-        <div class="featured-img"><img src="fresh_herbs.jpg" alt="Fresh Herb Collection"></div>
-        <h3>Fresh Herb Collection</h3>
-        <p class="muted">Chef's selection bouquet</p>
-      </article>
+          <article class="featured-card">
+              <div class="featured-img"><img src="Microgreenss.jpg" alt="Microgreens"></div>
+              <h3>Microgreens</h3>
+              <p class="muted">Ultra-fresh microbatches</p>
+          </article>
 
-      <article class="featured-card">
-        <div class="featured-img"><img src="spices.jpg" alt="Artisan Spices"></div>
-        <h3>Artisan Spices</h3>
-        <p class="muted">Rare, hand-ground blends</p>
-      </article>
-      
-    </div>
-  </section>
+          <article class="featured-card">
+              <div class="featured-img"><img src="oil.jpg" alt="Cold-pressed oil"></div>
+              <h3>Cold-Pressed Oil</h3>
+              <p class="muted">Single-estate, small press</p>
+          </article>
+          
+          <article class="featured-card">
+              <div class="featured-img"><img src="Heirloom Tomatoes.jpg" alt="Heirloom Tomatoes"></div>
+              <h3>Heirloom Tomatoes</h3>
+              <p class="muted">Limited summer edition</p>
+          </article>
+
+          <article class="featured-card">
+              <div class="featured-img"><img src="Culinary Herb.jpg" alt="Fresh Herb Collection"></div>
+              <h3>Fresh Herb Collection</h3>
+              <p class="muted">Chef's selection bouquet</p>
+          </article>
+
+          <article class="featured-card">
+              <div class="featured-img"><img src="spices.jpg" alt="Artisan Spices"></div>
+              <h3>Artisan Spices</h3>
+              <p class="muted">Rare, hand-ground blends</p>
+          </article>
+
+      </div>
+  </div>
+
+</section>
+
 
   <section class="maison section-padding fade-left" id="maison">
     <h2 class="section-title">Explore the Maison's Collections</h2>
@@ -189,7 +253,7 @@
       </div>
       
       <div class="maison-card">
-        <div class="maison-img"><img src="apiary.jpg" alt="Apiary"></div>
+        <div class="maison-img"><img src="bee.jpg" alt="Apiary"></div>
         <h3>Apiary</h3>
       </div>
 
@@ -251,7 +315,7 @@
       </div>
       
       <div class="product-card">
-        <div class="product-img-box"><img src="vegetables.jpg" alt="Seasonal Greens"></div>
+        <div class="product-img-box"><img src="veges.jpg" alt="Seasonal Greens"></div>
         <div class="product-details">
           <h3 class="p-name">Seasonal Greens</h3>
           <p class="p-price">$18.00</p>
@@ -259,7 +323,7 @@
       </div>
       
       <div class="product-card">
-        <div class="product-img-box"><img src="herbs.jpg" alt="Fresh Herb Bouquet"></div>
+        <div class="product-img-box"><img src="Bouquet.jpg" alt="Fresh Herb Bouquet"></div>
         <div class="product-details">
           <h3 class="p-name">Herb Bouquet</h3>
           <p class="p-price">$15.00</p>
@@ -308,10 +372,16 @@
           <button type="submit">JOIN</button>
         </form>
         <div class="social-links">
-          <a href="#" aria-label="Instagram"><img src="instagram.png" alt="IG" class="social-icon"></a>
-          <a href="#" aria-label="Twitter"><img src="icons8-twitter-logo-64.png" alt="TW" class="social-icon"></a>
-          <a href="#" aria-label="TikTok"><img src="tiktok.gif" alt="TT" class="social-icon"></a>
-        </div>
+  <a href="https://instagram.com/riseupfarms" target="_blank" aria-label="Instagram">
+    <img src="https://img.icons8.com/ios-filled/50/D4AF37/instagram-new.png" alt="Instagram" class="social-icon">
+  </a>
+  <a href="https://tiktok.com/@riseupfarms" target="_blank" aria-label="TikTok">
+    <img src="https://img.icons8.com/ios-filled/50/D4AF37/tiktok.png" alt="TikTok" class="social-icon">
+  </a>
+  <a href="https://facebook.com/riseupfarms" target="_blank" aria-label="Facebook">
+    <img src="https://img.icons8.com/ios-filled/50/D4AF37/facebook-f.png" alt="Facebook" class="social-icon">
+  </a>
+</div>
         
       </div>
     </div>

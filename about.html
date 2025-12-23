@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Us — RiseUp Farms: The Revolution</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="about-page">
+  
+  <header class="navbar-split">
+    <div id="search-bar-overlay" class="search-bar-overlay" aria-hidden="true">
+        <div class="search-bar-container container">
+            <div class="search-input-area">
+                <form class="search-bar-form" onsubmit="event.preventDefault();">
+                    <button type="submit" class="icon" aria-label="Submit Search">🔍</button>
+                    <input type="text" id="overlay-search-input" placeholder="Search RiseUp Farms..." autocomplete="off">
+                </form>
+                <div class="search-hints">
+                    <p class="search-hint-title">POPULAR SEARCHES</p>
+                    <div class="search-hint-list">
+                        <a href="index.html#maison" class="search-hint-item">Honey</a>
+                        <a href="index.html#products" class="search-hint-item">Microgreens</a>
+                    </div>
+                </div>
+            </div>
+            <button id="search-bar-close" class="icon" aria-label="Close Search">&times;</button>
+        </div>
+    </div>
+    
+    <div class="nav-top container">
+<div class="nav-left">
+  <button id="mobile-menu-toggle" class="icon hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+  <button id="search-toggle" class="icon" aria-label="Search">
+    <img src="https://img.icons8.com/ios/50/D4AF37/search--v1.png" alt="Search" class="nav-icon-svg">
+  </button> 
+</div>
+
+    
+      <div class="nav-center-logo">
+        <a href="index.html" aria-label="Go to homepage"> 
+          <img src="logo rise.png" alt="RiseUp Farms" class="logo-img" loading="lazy">
+        </a>
+      </div>
+  
+     <div class="nav-right">
+  <div class="mode-toggle">
+    <button id="mode-switch" aria-label="Toggle dark/light mode">
+      <img src="https://img.icons8.com/ios/50/D4AF37/moon-symbol.png" alt="Mode" class="nav-icon-svg">
+    </button>
+  </div>
+  <button class="icon" aria-label="Account">
+    <img src="https://img.icons8.com/ios/50/D4AF37/user-male-circle.png" alt="Account" class="nav-icon-svg">
+  </button>
+  <button class="icon" aria-label="Cart">
+    <img src="https://img.icons8.com/ios/50/D4AF37/shopping-bag.png" alt="Cart" class="nav-icon-svg">
+  </button>
+</div>
+
+  
+    <nav class="nav-bottom">
+      <ul class="nav-links-centered">
+        <li class="nav-item has-dropdown"><a href="index.html#grow">GROW ▾</a>
+          <div class="dropdown-menu">
+            <a href="index.html#greenhouse">Greenhouse</a>
+            <a href="index.html#orchard">Orchard</a>
+            <a href="index.html#hydroponics">Hydroponics</a>
+          </div>
+        </li>
+        <li class="nav-item has-dropdown"><a href="index.html#products">PRODUCTS ▾</a>
+          <div class="dropdown-menu">
+            <a href="index.html#featured">Featured Produce</a>
+            <a href="index.html#maison">Maison</a>
+            <a href="index.html#shop">Shop All</a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="index.html#maison">MAISON</a></li>
+        <li class="nav-item has-dropdown">
+          <a href="about.html" class="nav-link dropdown-toggle" id="about-dropdown-toggle">ABOUT ▾</a>
+          <div class="dropdown-menu">
+            <a href="about.html#story" class="dropdown-item">Our Story</a>
+            <a href="about.html#values" class="dropdown-item">Core Values</a>
+            <a href="contact.html#team" class="dropdown-item">Our Team</a>
+            <a href="contact.html" class="dropdown-item">Contact</a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+<!-- MOBILE SLIDE MENU - Replace in ALL HTML files -->
+<div id="slide-menu" class="slide-menu" aria-hidden="true">
+  <div class="slide-menu-header">
+    <div id="mobile-mode-switch" class="mode-toggle" aria-label="Toggle mobile dark/light">🌙</div>
+    <button id="mobile-search-toggle" class="icon" aria-label="Open mobile search">🔍</button>
+    <button id="mobile-slide-close" class="icon" aria-label="Close menu">&times;</button>
+  </div>
+
+  <ul class="slide-nav-links">
+    <!-- Regular clickable links -->
+    <li>
+      <a href="index.html" class="mobile-nav-link">HOME</a>
+    </li>
+    
+    <li>
+      <a href="index.html#grow" class="mobile-nav-link">GROW</a>
+    </li>
+    
+    <li>
+      <a href="index.html#products" class="mobile-nav-link">PRODUCTS</a>
+    </li>
+    
+    <li>
+      <a href="index.html#maison" class="mobile-nav-link">MAISON</a>
+    </li>
+    
+    <!-- Dropdown with clickable parent link -->
+    <li class="mobile-has-dropdown">
+      <div class="mobile-dropdown-header">
+        <a href="about.html" class="slide-menu-link">ABOUT</a>
+        <button class="mobile-dropdown-btn" aria-expanded="false" aria-controls="about-mobile-submenu">
+          <span class="dropdown-arrow"></span>
+        </button>
+      </div>
+      <ul class="mobile-dropdown-menu" id="about-mobile-submenu" aria-hidden="true">
+        <li><a href="about.html#story" class="slide-menu-link">Our Story</a></li>
+        <li><a href="about.html#values" class="slide-menu-link">Core Values</a></li>
+        <li><a href="contact.html#team" class="slide-menu-link">Our Team</a></li>
+        <li><a href="contact.html" class="slide-menu-link">Contact</a></li>
+      </ul>
+    </li>
+    
+    <li>
+      <a href="contact.html" class="mobile-nav-link">CONTACT</a>
+    </li>
+  </ul>
+</div>
+  <main>
+    <section class="about-hero hero-full" id="about-hero" aria-label="About Hero">
+      <div class="hero-media">
+        <img src="Farmer Plowing Background, .jpg" alt="Youth-Driven Agriculture" class="hero-img" loading="lazy">
+        <div class="hero-gradient"></div>
+      </div>
+      <div class="hero-overlay container fade-in">
+        <p class="hero-year">FRESH. RELIABLE. SUSTAINABLE.</p>
+        <h1 class="hero-title">Youth-Powered <span class="accent">Revolution</span> 🇿🇦</h1>
+        <p class="hero-sub">RiseUp Farms is where young visionaries meet cutting-edge agriculture. We're growing the future!</p>
+        <a class="pill-btn gold-variant" href="#story">Read Our Story</a>
+      </div>
+    </section>
+
+    <section class="story-section section-padding fade-left" id="story">
+      <div class="container story-grid asymmetrical">
+        <div class="story-text">
+          <h2 class="section-title-left">Changing The Game! 🚀</h2>
+          <p class="story-lead">We're not just growing crops—we're transforming lives, one harvest at a time. 💪🔥</p>
+          <p>We're revolutionizing agriculture through youth empowerment and game-changing sustainable practices. This is farming 2.0! We combine next-level eco-friendly practices with high productivity to create a model that serves both our community and our planet.</p>
+          <br>
+          <a href="contact.html" class="pill-btn">Join The Movement</a>
+        </div>
+        <div class="story-image-wrapper glass-panel">
+          <img src="Farmer Plowing Background, .jpg" alt="Young farmers in green fields" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="purpose-section section-padding stagger" id="purpose">
+      <div class="container">
+        <h2 class="section-title">What We Do</h2>
+        <div class="purpose-grid">
+          
+          <div class="purpose-card glass-panel fade-in">
+            <div class="icon-box">🌿</div>
+            <h3>Sustainable Farming 2.0</h3>
+            <p class="tagline-subtext">Next-level eco-friendly practices.</p>
+            <p>We don't just preserve our planet—we SUPERCHARGE it! High productivity meets environmental love. 🌍✨</p>
+          </div>
+          
+          <div class="purpose-card glass-panel fade-in">
+            <div class="icon-box">🥬</div>
+            <h3>Fresh Produce That Slaps!</h3>
+            <p class="tagline-subtext">No cap. Just freshness.</p>
+            <p>From our fields to your table, we deliver the absolute freshest, highest-quality veggies and crops. 🔥🍅</p>
+          </div>
+
+          <div class="purpose-card glass-panel fade-in">
+            <div class="icon-box">🤝</div>
+            <h3>Community Development</h3>
+            <p class="tagline-subtext">Growing communities, not just crops.</p>
+            <p>Job creation, education, and economic growth that hits different. We build resilient, thriving neighborhoods. 💪🏡</p>
+          </div>
+
+          <div class="purpose-card glass-panel fade-in">
+            <div class="icon-box">👥</div>
+            <h3>Youth Empowerment</h3>
+            <p class="tagline-subtext">Training the next generation.</p>
+            <p>Creating agricultural legends with cutting-edge techniques and boss-level business skills! 🎆📈</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="values-section section-padding stagger" id="values">
+      <div class="container">
+        <h2 class="section-title">Why RiseUp is THE Choice? 🔥</h2>
+        <div class="values-grid">
+          
+          <div class="feature-card glass-panel fade-in">
+            <span class="value-icon">✅</span>
+            <h3>Guaranteed Freshness</h3>
+            <p>Harvested at peak perfection every single time! 🌿</p>
+          </div>
+          
+          <div class="feature-card glass-panel fade-in">
+            <span class="value-icon">🚚</span>
+            <h3>Reliable Supply Chain</h3>
+            <p>We deliver consistency you can always count on! ✨</p>
+          </div>
+          
+          <div class="feature-card glass-panel fade-in">
+            <span class="value-icon">🌍</span>
+            <h3>Sustainable Practices</h3>
+            <p>Planet-friendly farming that's actually changing the game! 💪</p>
+          </div>
+          
+          <div class="feature-card glass-panel fade-in">
+            <span class="value-icon">🚀</span>
+            <h3>Youth-Driven Innovation</h3>
+            <p>Fresh minds, fresh approaches, fresh results! 💡</p>
+          </div>
+          
+          <div class="feature-card glass-panel fade-in">
+            <span class="value-icon">🏡</span>
+            <h3>Community Impact</h3>
+            <p>Your purchase literally transforms lives and builds communities! ❤️</p>
+          </div>
+          
+          <div class="feature-card glass-panel fade-in">
+            <span class="value-icon">🏆</span>
+            <h3>Quality Assurance</h3>
+            <p>Next-level testing and quality control that hits different! 🔍</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer" role="contentinfo">
+    <div class="footer-container container">
+      <div class="footer-col">
+        <h4>Collections</h4>
+        <ul>
+          <li><a href="index.html#products">Produce</a></li>
+          <li><a href="index.html#maison">Maison</a></li>
+          <li><a href="index.html#shop">Shop</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Info</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#values">Sustainability</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>RiseUp</h4>
+        <ul>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Invest</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Stay Connected</h4>
+        <p class="newsletter-text">Get field notes and early drops.</p>
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" name="email" placeholder="Email address" aria-label="Email">
+          <button type="submit">JOIN</button>
+        </form>
+        <div class="social-links">
+  <a href="https://instagram.com/riseupfarms" target="_blank" aria-label="Instagram">
+    <img src="https://img.icons8.com/ios-filled/50/D4AF37/instagram-new.png" alt="Instagram" class="social-icon">
+  </a>
+  <a href="https://tiktok.com/@riseupfarms" target="_blank" aria-label="TikTok">
+    <img src="https://img.icons8.com/ios-filled/50/D4AF37/tiktok.png" alt="TikTok" class="social-icon">
+  </a>
+  <a href="https://facebook.com/riseupfarms" target="_blank" aria-label="Facebook">
+    <img src="https://img.icons8.com/ios-filled/50/D4AF37/facebook-f.png" alt="Facebook" class="social-icon">
+  </a>
+</div>
+
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 RiseUp Farms. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

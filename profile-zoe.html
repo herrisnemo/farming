@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoe Kulondi — RiseUp Farms Executive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="profile-page">
+    
+    <header class="navbar-split">
+        <div class="nav-top container">
+            <div class="nav-left">
+                <button id="mobile-menu-toggle" class="icon hamburger" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+            <div class="nav-center-logo">
+                <a href="index.html"><img src="logo rise.png" alt="RiseUp Farms" class="logo-img"></a>
+            </div>
+            <div class="nav-right">
+                <div id="mode-switch" class="mode-toggle">🌙</div>
+            </div>
+        </div>
+    </header>
+<!-- MOBILE SLIDE MENU - Replace in ALL HTML files -->
+<div id="slide-menu" class="slide-menu" aria-hidden="true">
+  <div class="slide-menu-header">
+    <div id="mobile-mode-switch" class="mode-toggle" aria-label="Toggle mobile dark/light">🌙</div>
+    <button id="mobile-search-toggle" class="icon" aria-label="Open mobile search">🔍</button>
+    <button id="mobile-slide-close" class="icon" aria-label="Close menu">&times;</button>
+  </div>
+
+  <ul class="slide-nav-links">
+    <!-- Regular clickable links -->
+    <li>
+      <a href="index.html" class="mobile-nav-link">HOME</a>
+    </li>
+    
+    <li>
+      <a href="index.html#grow" class="mobile-nav-link">GROW</a>
+    </li>
+    
+    <li>
+      <a href="index.html#products" class="mobile-nav-link">PRODUCTS</a>
+    </li>
+    
+    <li>
+      <a href="index.html#maison" class="mobile-nav-link">MAISON</a>
+    </li>
+    
+    <!-- Dropdown with clickable parent link -->
+    <li class="mobile-has-dropdown">
+      <div class="mobile-dropdown-header">
+        <a href="about.html" class="slide-menu-link">ABOUT</a>
+        <button class="mobile-dropdown-btn" aria-expanded="false" aria-controls="about-mobile-submenu">
+          <span class="dropdown-arrow"></span>
+        </button>
+      </div>
+      <ul class="mobile-dropdown-menu" id="about-mobile-submenu" aria-hidden="true">
+        <li><a href="about.html#story" class="slide-menu-link">Our Story</a></li>
+        <li><a href="about.html#values" class="slide-menu-link">Core Values</a></li>
+        <li><a href="contact.html#team" class="slide-menu-link">Our Team</a></li>
+        <li><a href="contact.html" class="slide-menu-link">Contact</a></li>
+      </ul>
+    </li>
+    
+    <li>
+      <a href="contact.html" class="mobile-nav-link">CONTACT</a>
+    </li>
+  </ul>
+</div>
+
+    <main class="container section-padding">
+        <div class="profile-header fade-in">
+            <a href="contact.html" class="back-link">← BACK TO DIRECTORY</a>
+            
+            <div class="profile-main-grid">
+                <div class="profile-image glass-panel">
+                    <img src="team-zoe.jpg" alt="Zoe Kulondi" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x600/0f1a13/D4AF37?text=Zoe+Kulondi'">
+                </div>
+                
+                <div class="profile-intro">
+                    <h1 class="hero-title">Zoe <span class="accent">Kulondi</span></h1>
+                    <p class="role-badge">Managing Director (MD)</p>
+                    <p class="profile-bio">
+                        As Managing Director, Zoe provides overall strategic leadership and direction for RiseUp Farms. 
+                        She oversees all business operations, makes key strategic decisions, and represents the 
+                        company to external stakeholders with a focus on sustainable innovation.
+                    </p>
+                    
+                    <div class="profile-stats">
+                        <div class="stat-item"><strong>Focus:</strong> Strategy & Growth</div>
+                        <div class="stat-item"><strong>Mission:</strong> Youth Empowerment</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-details-grid stagger">
+            <div class="detail-card glass-panel">
+                <h3>Core Values</h3>
+                <ul class="luxury-list">
+                    <li><strong>Visionary Leadership:</strong> Setting clear, long-term direction.</li>
+                    <li><strong>Integrity:</strong> Upholding radical honesty in agri-business.</li>
+                    <li><strong>Innovation:</strong> Driving transformative tech approaches.</li>
+                </ul>
+            </div>
+
+            <div class="detail-card glass-panel">
+                <h3>Strategic Goals</h3>
+                <ul class="luxury-list">
+                    <li>Establish RiseUp as SA's premier youth-led agri firm.</li>
+                    <li>Create sustainable profit through hydroponic excellence.</li>
+                    <li>Build a global culture for young agricultural talent.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo" id="contact">
+      <div class="footer-container container">
+        <div class="footer-col">
+          <h4>Collections</h4>
+          <ul>
+            <li><a href="index.html#products">Produce</a></li>
+            <li><a href="index.html#maison">Maison</a></li>
+            <li><a href="index.html#shop">Shop</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer-col">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#grow">Sustainability</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer-col">
+          <h4>RiseUp</h4>
+          <ul>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Invest</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer-col">
+          <h4>Stay Connected</h4>
+          <p class="newsletter-text">Get field notes and early drops.</p>
+          <form class="newsletter-form" action="#" method="post">
+            <input type="email" name="email" placeholder="Email address" aria-label="Email">
+            <button type="submit">JOIN</button>
+          </form>
+          <div class="social-links">
+            <a href="https://instagram.com/riseupfarms" target="_blank" aria-label="Instagram">
+              <img src="https://img.icons8.com/ios-filled/50/D4AF37/instagram-new.png" alt="Instagram" class="social-icon">
+            </a>
+            <a href="https://tiktok.com/@riseupfarms" target="_blank" aria-label="TikTok">
+              <img src="https://img.icons8.com/ios-filled/50/D4AF37/tiktok.png" alt="TikTok" class="social-icon">
+            </a>
+            <a href="https://facebook.com/riseupfarms" target="_blank" aria-label="Facebook">
+              <img src="https://img.icons8.com/ios-filled/50/D4AF37/facebook-f.png" alt="Facebook" class="social-icon">
+            </a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="footer-bottom">
+        <p>© 2026 RiseUp Farms. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
