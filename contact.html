@@ -10,33 +10,53 @@
 <body class="contact-page">
   
   <header class="navbar-split">
+    <div id="search-bar-overlay" class="search-bar-overlay" aria-hidden="true">
+      <div class="search-bar-container container">
+        <div class="search-input-area">
+          <form class="search-bar-form" onsubmit="event.preventDefault();">
+            <button type="submit" class="icon" aria-label="Submit Search">🔍</button>
+            <input type="text" id="overlay-search-input" placeholder="Search RiseUp Farms..." autocomplete="off">
+          </form>
+          <div class="search-hints">
+            <p class="search-hint-title">POPULAR SEARCHES</p>
+            <div class="search-hint-list">
+              <a href="index.html#maison" class="search-hint-item">Honey</a>
+              <a href="index.html#products" class="search-hint-item">Microgreens</a>
+            </div>
+          </div>
+        </div>
+        <button id="search-bar-close" class="icon" aria-label="Close Search">&times;</button>
+      </div>
+    </div>
+
     <div class="nav-top container">
       <div class="nav-left">
         <button id="mobile-menu-toggle" class="icon hamburger" aria-label="Open menu">
-            <span></span><span></span><span></span>
+          <span></span><span></span><span></span>
         </button>
         <button id="search-toggle" class="icon" aria-label="Search">
-            <img src="https://img.icons8.com/ios/50/D4AF37/search--v1.png" alt="Search" class="nav-icon-svg">
+          <img src="https://img.icons8.com/ios/50/D4AF37/search--v1.png" alt="Search" class="nav-icon-svg">
         </button> 
       </div>
       
       <div class="nav-center-logo">
         <a href="index.html" aria-label="Go to homepage">
-            <img src="logo rise.png" alt="RiseUp Farms" class="logo-img">
+          <img src="logo rise.png" alt="RiseUp Farms" class="logo-img">
         </a>
       </div>
 
       <div class="nav-right">
         <div class="mode-toggle">
-            <button id="mode-switch" aria-label="Toggle dark/light mode">
+          <button id="mode-switch" aria-label="Toggle dark/light mode">
             <img src="https://img.icons8.com/ios/50/D4AF37/moon-symbol.png" alt="Mode" class="nav-icon-svg">
-            </button>
+          </button>
         </div>
         <button class="icon" aria-label="Account">
-            <img src="https://img.icons8.com/ios/50/D4AF37/user-male-circle.png" alt="Account" class="nav-icon-svg">
+          <img src="https://img.icons8.com/ios/50/D4AF37/user-male-circle.png" alt="Account" class="nav-icon-svg">
         </button>
-        <button class="icon" aria-label="Cart">
-            <img src="https://img.icons8.com/ios/50/D4AF37/shopping-bag.png" alt="Cart" class="nav-icon-svg">
+        <button class="icon cart-icon-btn" aria-label="Cart" onclick="toggleCart()">
+          <img src="https://img.icons8.com/ios/50/D4AF37/shopping-bag.png" alt="Cart" class="nav-icon-svg">
+          <span id="cart-badge" class="cart-badge">0</span>
         </button>
       </div>
     </div>
@@ -59,77 +79,59 @@
         </li>
         <li class="nav-item"><a href="index.html#maison">MAISON</a></li>
         <li class="nav-item has-dropdown">
-            <a href="about.html" class="nav-link dropdown-toggle" id="about-dropdown-toggle">ABOUT ▾</a>
-            <div class="dropdown-menu">
-              <a href="about.html#story" class="dropdown-item">Our Story</a>
-              <a href="about.html#values" class="dropdown-item">Core Values</a>
-              <a href="contact.html#team" class="dropdown-item">Our Team</a>
-              <a href="contact.html" class="dropdown-item">Contact</a>
-            </div>
+          <a href="about.html" class="nav-link dropdown-toggle">ABOUT ▾</a>
+          <div class="dropdown-menu">
+            <a href="about.html#story">Our Story</a>
+            <a href="about.html#values">Core Values</a>
+            <a href="contact.html#team">Our Team</a>
+            <a href="contact.html">Contact</a>
+          </div>
         </li>
         <li class="nav-item"><a href="contact.html">CONTACT</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- FIXED: Removed broken comment tag -->
-  <<!-- MOBILE SLIDE MENU - Replace in ALL HTML files -->
-<div id="slide-menu" class="slide-menu" aria-hidden="true">
-  <div class="slide-menu-header">
-    <div id="mobile-mode-switch" class="mode-toggle" aria-label="Toggle mobile dark/light">🌙</div>
-    <button id="mobile-search-toggle" class="icon" aria-label="Open mobile search">🔍</button>
-    <button id="mobile-slide-close" class="icon" aria-label="Close menu">&times;</button>
+  <div id="slide-menu" class="slide-menu" aria-hidden="true">
+    <div class="slide-menu-header">
+      <div id="mobile-mode-switch" class="mode-toggle" aria-label="Toggle mobile dark/light">🌙</div>
+      <button id="mobile-search-toggle" class="icon" aria-label="Open mobile search">🔍</button>
+      <button id="mobile-slide-close" class="icon" aria-label="Close menu">&times;</button>
+    </div>
+
+    <ul class="slide-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">HOME</a></li>
+      <li><a href="index.html#grow" class="mobile-nav-link">GROW</a></li>
+      <li><a href="index.html#products" class="mobile-nav-link">PRODUCTS</a></li>
+      <li><a href="index.html#maison" class="mobile-nav-link">MAISON</a></li>
+      
+      <li class="mobile-has-dropdown">
+        <div class="mobile-dropdown-header">
+          <a href="about.html" class="slide-menu-link">ABOUT</a>
+          <button class="mobile-dropdown-btn" aria-expanded="false" aria-controls="about-mobile-submenu">
+            <span class="dropdown-arrow"></span>
+          </button>
+        </div>
+        <ul class="mobile-dropdown-menu" id="about-mobile-submenu" aria-hidden="true">
+          <li><a href="about.html#story" class="slide-menu-link">Our Story</a></li>
+          <li><a href="about.html#values" class="slide-menu-link">Core Values</a></li>
+          <li><a href="contact.html#team" class="slide-menu-link">Our Team</a></li>
+          <li><a href="contact.html" class="slide-menu-link">Contact</a></li>
+        </ul>
+      </li>
+      
+      <li><a href="contact.html" class="mobile-nav-link">CONTACT</a></li>
+    </ul>
   </div>
 
-  <ul class="slide-nav-links">
-    <!-- Regular clickable links -->
-    <li>
-      <a href="index.html" class="mobile-nav-link">HOME</a>
-    </li>
-    
-    <li>
-      <a href="index.html#grow" class="mobile-nav-link">GROW</a>
-    </li>
-    
-    <li>
-      <a href="index.html#products" class="mobile-nav-link">PRODUCTS</a>
-    </li>
-    
-    <li>
-      <a href="index.html#maison" class="mobile-nav-link">MAISON</a>
-    </li>
-    
-    <!-- Dropdown with clickable parent link -->
-    <li class="mobile-has-dropdown">
-      <div class="mobile-dropdown-header">
-        <a href="about.html" class="slide-menu-link">ABOUT</a>
-        <button class="mobile-dropdown-btn" aria-expanded="false" aria-controls="about-mobile-submenu">
-          <span class="dropdown-arrow"></span>
-        </button>
-      </div>
-      <ul class="mobile-dropdown-menu" id="about-mobile-submenu" aria-hidden="true">
-        <li><a href="about.html#story" class="slide-menu-link">Our Story</a></li>
-        <li><a href="about.html#values" class="slide-menu-link">Core Values</a></li>
-        <li><a href="contact.html#team" class="slide-menu-link">Our Team</a></li>
-        <li><a href="contact.html" class="slide-menu-link">Contact</a></li>
-      </ul>
-    </li>
-    
-    <li>
-      <a href="contact.html" class="mobile-nav-link">CONTACT</a>
-    </li>
-  </ul>
-</div>
-
   <main class="container section-padding">
-    <div class="center-text fade-in" style="text-align: center; margin-bottom: 60px; margin-top: 80px;">
-        <h1 class="hero-title">Executive <span class="accent">Directory</span></h1>
-        <p class="section-subtitle">Meet Our Young Leadership Team (Class of 2025)</p>
+    <div class="center-text" style="text-align: center; margin-bottom: 60px; margin-top: 80px;">
+      <h1 class="hero-title">Executive <span class="accent">Directory</span></h1>
+      <p class="section-subtitle">Meet Our Young Leadership Team (Class of 2025)</p>
     </div>
 
     <div class="team-grid">
       
-      <!-- Zoe Kulondi -->
       <a href="profile-zoe.html" class="team-card glass-panel fade-in">
         <div class="team-img-placeholder">
           <img src="team-zoe.jpg" alt="Zoe Kulondi" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x500/0f1a13/D4AF37?text=Zoe+Kulondi'">
@@ -138,25 +140,22 @@
         <p class="role">Managing Director (MD)</p>
       </a>
 
-      <!-- Shaun Nanasele -->
       <a href="profile-shaun.html" class="team-card glass-panel fade-in">
         <div class="team-img-placeholder">
-          <img src="team-shaun.jpg" alt="Shaun Nanasele" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x500/0f1a13/D4AF37?text=Shaun+Nanasele'">
+          <img src="PSX_20251216_224040.png" alt="Shaun Nanasele" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x500/0f1a13/D4AF37?text=Shaun+Nanasele'">
         </div>
         <h3>Shaun Nanasele</h3>
         <p class="role">Operations Director (OD)</p>
       </a>
 
-      <!-- Joshua Musandririe -->
       <a href="profile-joshua.html" class="team-card glass-panel fade-in">
         <div class="team-img-placeholder">
-          <img src="team-joshua.jpg" alt="Joshua Musandririe" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x500/0f1a13/D4AF37?text=Joshua+Musandririe'">
+          <img src="PSX_20251216_224040.png" alt="Joshua Musandririe" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x500/0f1a13/D4AF37?text=Joshua+Musandririe'">
         </div>
         <h3>Joshua Musandririe</h3>
         <p class="role">Finance Officer (FAO)</p>
       </a>
 
-      <!-- Deneo Msthali -->
       <a href="profile-deneo.html" class="team-card glass-panel fade-in">
         <div class="team-img-placeholder">
           <img src="team-deneo.jpg" alt="Deneo Msthali" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x500/0f1a13/D4AF37?text=Deneo+Msthali'">
@@ -165,7 +164,6 @@
         <p class="role">Marketing Officer (MCRO)</p>
       </a>
 
-      <!-- Owethu Mahlobo -->
       <a href="profile-owethu.html" class="team-card glass-panel fade-in">
         <div class="team-img-placeholder">
           <img src="team-owethu.jpg" alt="Owethu Mahlobo" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x500/0f1a13/D4AF37?text=Owethu+Mahlobo'">
@@ -174,16 +172,14 @@
         <p class="role">Agri Production (APO)</p>
       </a>
 
-      <!-- Harris -->
       <a href="profile-harris.html" class="team-card glass-panel fade-in">
         <div class="team-img-placeholder">
-          <img src="20251222_100239.jpg" alt="Harris" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x500/0f1a13/D4AF37?text=Harris'">
+          <img src="PSX_20251216_224040.png" alt="Harris" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x500/0f1a13/D4AF37?text=Harris'">
         </div>
         <h3>Harris</h3>
         <p class="role">IT Director (ITD)</p>
       </a>
 
-      <!-- Innocent Raddebe -->
       <a href="profile-innocent.html" class="team-card glass-panel fade-in">
         <div class="team-img-placeholder">
           <img src="team-innocent.jpg" alt="Innocent Raddebe" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x500/0f1a13/D4AF37?text=Innocent+Raddebe'">
@@ -193,95 +189,103 @@
       </a>
 
     </div>
+
     <section class="section-padding fade-in" id="contact-info">
-  <div class="container" style="max-width: 900px;">
+      <div class="container" style="max-width: 900px;">
 
-    <div class="center-text" style="text-align:center; margin-bottom: 50px;">
-      <h2 class="section-title">Get in Touch with <span class="accent">RiseUp Farms</span></h2>
-      <p class="section-subtitle">
-        Delivering fresh agricultural produce and driving farming innovation.
-        <br><br>
-        Whether you’re interested in our sustainable produce, farming practices,
-        or youth development initiatives, our team is ready to assist.
-      </p>
-    </div>
+        <div class="center-text" style="text-align:center; margin-bottom: 50px;">
+          <h2 class="section-title">Get in Touch with <span class="accent">RiseUp Farms</span></h2>
+          <p class="section-subtitle">
+            Delivering fresh agricultural produce and driving farming innovation.
+            <br><br>
+            Whether you're interested in our sustainable produce, farming practices,
+            or youth development initiatives, our team is ready to assist.
+          </p>
+        </div>
 
-    <div class="glass-panel" style="padding: 40px;">
+        <div class="glass-panel" style="padding: 40px;">
+          <h3 style="margin-bottom: 20px;">Send Us a Message</h3>
+          <p class="muted" style="margin-bottom: 30px;">
+            Complete the form below and a member of our team will respond shortly.
+          </p>
 
-      <h3 style="margin-bottom: 20px;">Send Us a Message</h3>
-      <p class="muted" style="margin-bottom: 30px;">
-        Complete the form below and a member of our team will respond shortly.
-      </p>
+          <form class="contact-form">
+            <label>
+              Full Name <span class="muted">(required)</span>
+              <input type="text" placeholder="Your full name" required>
+            </label>
 
-      <form class="contact-form">
-        
-        <label>
-          Full Name <span class="muted">(required)</span>
-          <input type="text" placeholder="Your full name" required>
-        </label>
+            <label>
+              Email Address <span class="muted">(required)</span>
+              <input type="email" placeholder="your.email@example.com" required>
+            </label>
 
-        <label>
-          Email Address <span class="muted">(required)</span>
-          <input type="email" placeholder="your.email@example.com" required>
-        </label>
+            <label>
+              Message <span class="muted">(required)</span>
+              <textarea rows="5" placeholder="Tell us about your inquiry, order, or partnership request..." required></textarea>
+            </label>
 
-        <label>
-          Message <span class="muted">(required)</span>
-          <textarea rows="5" placeholder="Tell us about your inquiry, order, or partnership request..." required></textarea>
-        </label>
+            <p class="muted" style="font-size: 0.85rem; margin-top: 10px;">
+              Please do not share sensitive information such as passwords or credit card details.
+              This form is intended for general inquiries only.
+            </p>
 
-        <p class="muted" style="font-size: 0.85rem; margin-top: 10px;">
-          Please do not share sensitive information such as passwords or credit card details.
-          This form is intended for general inquiries only.
-        </p>
+            <button type="submit" class="pill-btn" style="margin-top: 20px;">
+              Send Message
+            </button>
+          </form>
+        </div>
 
-        <button type="submit" class="pill-btn" style="margin-top: 20px;">
-          Send Message
-        </button>
+        <div class="glass-panel" style="padding: 40px; margin-top: 40px;">
+          <h3 style="margin-bottom: 20px; font-size: 1.8rem; color: var(--gold);">Contact Information</h3>
 
-      </form>
-    </div>
+          <div style="display: grid; gap: 25px;">
+            <div class="info-item">
+              <span class="icon-gold">📧</span>
+              <div style="flex: 1;">
+                <strong style="display: block; margin-bottom: 5px; color: var(--white);">Email</strong>
+                <a href="mailto:operationsdirector@riseupfarms.xyz" style="word-break: break-word; color: var(--white); text-decoration: none; line-height: 1.6;">
+                  operationsdirector@riseupfarms.xyz
+                </a>
+                <p class="muted" style="margin-top: 5px; font-size: 0.9rem;">For inquiries, orders, and partnership opportunities.</p>
+              </div>
+            </div>
 
-    <div class="glass-panel" style="padding: 40px; margin-top: 40px;">
-      <h3 style="margin-bottom: 20px;">Contact Information</h3>
+            <div class="info-item">
+              <span class="icon-gold">📞</span>
+              <div style="flex: 1;">
+                <strong style="display: block; margin-bottom: 5px; color: var(--white);">Phone</strong>
+                <a href="tel:0826121932" style="color: var(--white); text-decoration: none;">082 612 1932</a>
+                <p class="muted" style="margin-top: 5px; font-size: 0.9rem;">Available during business hours for immediate assistance.</p>
+              </div>
+            </div>
 
-      <p>
-        📧 <strong>Email</strong><br>
-        <a href="mailto:operationsdirector@riseupfarms.xyz">
-          operationsdirector@riseupfarms.xyz
-        </a><br>
-        <span class="muted">For inquiries, orders, and partnership opportunities.</span>
-      </p>
+            <div class="info-item">
+              <span class="icon-gold">⏰</span>
+              <div style="flex: 1;">
+                <strong style="display: block; margin-bottom: 5px; color: var(--white);">Response Time</strong>
+                <p class="muted" style="margin: 0; font-size: 0.9rem;">
+                  We typically respond within 24–48 hours. For urgent matters, please contact us by phone.
+                </p>
+              </div>
+            </div>
 
-      <br>
+            <div class="info-item">
+              <span class="icon-gold">🕒</span>
+              <div style="flex: 1;">
+                <strong style="display: block; margin-bottom: 5px; color: var(--white);">Business Hours</strong>
+                <p class="muted" style="margin: 0; font-size: 0.9rem; line-height: 1.6;">
+                  Monday – Friday: 8:00 AM – 5:00 PM (SAST)<br>
+                  Saturday: 9:00 AM – 2:00 PM (SAST)<br>
+                  Sunday: Closed
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <p>
-        📞 <strong>Phone</strong><br>
-        <a href="tel:0826121932">082 612 1932</a><br>
-        <span class="muted">Available during business hours for immediate assistance.</span>
-      </p>
-
-      <br>
-
-      <p>
-        ⏰ <strong>Response Time</strong><br>
-        <span class="muted">
-          We typically respond within 24–48 hours. For urgent matters, please contact us by phone.
-        </span>
-      </p>
-
-      <br>
-
-      <p>
-        🕒 <strong>Business Hours</strong><br>
-        Monday – Friday: 8:00 AM – 5:00 PM (SAST)<br>
-        Saturday: 9:00 AM – 2:00 PM (SAST)<br>
-        Sunday: Closed
-      </p>
-    </div>
-
-  </div>
-</section>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -334,6 +338,196 @@
       <p>© 2026 RiseUp Farms. All rights reserved.</p>
     </div>
   </footer>
+<!-- ==================== AUTHENTICATION MODAL ==================== -->
+<!-- Add this RIGHT BEFORE the cart sidebar in ALL HTML files -->
+
+<div id="auth-modal" class="auth-modal">
+  <div class="auth-modal-content">
+    <button id="close-auth-modal" class="close-auth-btn">&times;</button>
+    
+    <!-- Sign In Form -->
+    <div id="signin-form" class="auth-form active">
+      <div class="auth-header">
+        <h2>Welcome Back! 👋</h2>
+        <p class="auth-subtitle">Sign in to continue shopping</p>
+      </div>
+      
+      <form id="signin-form-element" class="auth-form-fields">
+        <div class="form-group">
+          <label for="signin-email">Email Address</label>
+          <input 
+            type="email" 
+            id="signin-email" 
+            placeholder="your.email@example.com" 
+            required
+            autocomplete="email"
+          >
+        </div>
+        
+        <div class="form-group">
+          <label for="signin-password">Password</label>
+          <input 
+            type="password" 
+            id="signin-password" 
+            placeholder="Enter your password" 
+            required
+            autocomplete="current-password"
+          >
+        </div>
+        
+        <div class="form-options">
+          <label class="checkbox-label">
+            <input type="checkbox" id="remember-me">
+            <span>Remember me</span>
+          </label>
+          <a href="#" class="forgot-password">Forgot password?</a>
+        </div>
+        
+        <button type="submit" class="pill-btn auth-submit-btn">
+          Sign In
+        </button>
+      </form>
+      
+      <div class="auth-divider">
+        <span>or continue with</span>
+      </div>
+      
+      <div class="social-auth-buttons">
+        <button class="social-btn" onclick="showComingSoon('Google')">
+          <img src="https://img.icons8.com/color/48/google-logo.png" alt="Google" width="20">
+          Google
+        </button>
+        <button class="social-btn" onclick="showComingSoon('Facebook')">
+          <img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook" width="20">
+          Facebook
+        </button>
+      </div>
+      
+      <p class="auth-switch">
+        Don't have an account? 
+        <a href="#" id="switch-to-signup">Sign Up</a>
+      </p>
+    </div>
+    
+    <!-- Sign Up Form -->
+    <div id="signup-form" class="auth-form">
+      <div class="auth-header">
+        <h2>Join RiseUp Farms 🌱</h2>
+        <p class="auth-subtitle">Create your account to get started</p>
+      </div>
+      
+      <form id="signup-form-element" class="auth-form-fields">
+        <div class="form-group">
+          <label for="signup-name">Full Name</label>
+          <input 
+            type="text" 
+            id="signup-name" 
+            placeholder="John Doe" 
+            required
+            autocomplete="name"
+          >
+        </div>
+        
+        <div class="form-group">
+          <label for="signup-email">Email Address</label>
+          <input 
+            type="email" 
+            id="signup-email" 
+            placeholder="your.email@example.com" 
+            required
+            autocomplete="email"
+          >
+        </div>
+        
+        <div class="form-group">
+          <label for="signup-password">Password</label>
+          <input 
+            type="password" 
+            id="signup-password" 
+            placeholder="At least 8 characters" 
+            required
+            autocomplete="new-password"
+            minlength="8"
+          >
+        </div>
+        
+        <div class="form-group">
+          <label for="signup-confirm-password">Confirm Password</label>
+          <input 
+            type="password" 
+            id="signup-confirm-password" 
+            placeholder="Re-enter your password" 
+            required
+            autocomplete="new-password"
+            minlength="8"
+          >
+        </div>
+        
+        <label class="checkbox-label terms-checkbox">
+          <input type="checkbox" id="terms-agree" required>
+          <span>I agree to the <a href="#">Terms & Conditions</a></span>
+        </label>
+        
+        <button type="submit" class="pill-btn auth-submit-btn">
+          Create Account
+        </button>
+      </form>
+      
+      <div class="auth-divider">
+        <span>or sign up with</span>
+      </div>
+      
+      <div class="social-auth-buttons">
+        <button class="social-btn" onclick="showComingSoon('Google')">
+          <img src="https://img.icons8.com/color/48/google-logo.png" alt="Google" width="20">
+          Google
+        </button>
+        <button class="social-btn" onclick="showComingSoon('Facebook')">
+          <img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook" width="20">
+          Facebook
+        </button>
+      </div>
+      
+      <p class="auth-switch">
+        Already have an account? 
+        <a href="#" id="switch-to-signin">Sign In</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Auth Modal Overlay -->
+<div id="auth-overlay" class="auth-overlay"></div>
+  <!-- SHOPPING CART SIDEBAR -->
+  <div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button id="close-cart" class="close-cart-btn">&times;</button>
+    </div>
+    
+    <div id="empty-cart-message" class="empty-cart">
+      <div class="empty-cart-icon">🛒</div>
+      <p>Your cart is empty</p>
+      <button onclick="toggleCart()" class="pill-btn">Continue Shopping</button>
+    </div>
+    
+    <div id="cart-items" class="cart-items"></div>
+    
+    <div id="cart-footer" class="cart-footer">
+      <div class="cart-total-row">
+        <span>Subtotal:</span>
+        <span id="cart-total" class="cart-total-amount">R0.00</span>
+      </div>
+      <button id="checkout-btn" class="pill-btn" style="width: 100%; margin-top: 15px;">
+        Proceed to Checkout
+      </button>
+      <button onclick="toggleCart()" class="pill-btn gold-variant" style="width: 100%; margin-top: 10px;">
+        Continue Shopping
+      </button>
+    </div>
+  </div>
+
+  <div id="cart-overlay" class="cart-overlay"></div>
 
   <script src="script.js"></script>
 </body>

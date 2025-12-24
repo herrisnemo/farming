@@ -10,67 +10,118 @@
 <body class="profile-page">
     
     <header class="navbar-split">
+        <!-- SEARCH BAR OVERLAY -->
+        <div id="search-bar-overlay" class="search-bar-overlay" aria-hidden="true">
+            <div class="search-bar-container container">
+                <div class="search-input-area">
+                    <form class="search-bar-form" onsubmit="event.preventDefault();">
+                        <button type="submit" class="icon" aria-label="Submit Search">🔍</button>
+                        <input type="text" id="overlay-search-input" placeholder="Search RiseUp Farms..." autocomplete="off">
+                    </form>
+                    <div class="search-hints">
+                        <p class="search-hint-title">POPULAR SEARCHES</p>
+                        <div class="search-hint-list">
+                            <a href="index.html#maison" class="search-hint-item">Honey</a>
+                            <a href="index.html#products" class="search-hint-item">Microgreens</a>
+                        </div>
+                    </div>
+                </div>
+                <button id="search-bar-close" class="icon" aria-label="Close Search">&times;</button>
+            </div>
+        </div>
+
         <div class="nav-top container">
             <div class="nav-left">
                 <button id="mobile-menu-toggle" class="icon hamburger" aria-label="Open menu">
                     <span></span><span></span><span></span>
                 </button>
+                <button id="search-toggle" class="icon" aria-label="Search">
+                    <img src="https://img.icons8.com/ios/50/D4AF37/search--v1.png" alt="Search" class="nav-icon-svg">
+                </button>
             </div>
+            
             <div class="nav-center-logo">
                 <a href="index.html"><img src="logo rise.png" alt="RiseUp Farms" class="logo-img"></a>
             </div>
+            
             <div class="nav-right">
-                <div id="mode-switch" class="mode-toggle">🌙</div>
+                <div class="mode-toggle">
+                    <button id="mode-switch" aria-label="Toggle dark/light mode">
+                        <img src="https://img.icons8.com/ios/50/D4AF37/moon-symbol.png" alt="Mode" class="nav-icon-svg">
+                    </button>
+                </div>
+                <button class="icon" aria-label="Account">
+                    <img src="https://img.icons8.com/ios/50/D4AF37/user-male-circle.png" alt="Account" class="nav-icon-svg">
+                </button>
+                <button class="icon" aria-label="Cart">
+                    <img src="https://img.icons8.com/ios/50/D4AF37/shopping-bag.png" alt="Cart" class="nav-icon-svg">
+                </button>
             </div>
         </div>
-    </header>
-<!-- MOBILE SLIDE MENU - Replace in ALL HTML files -->
-<div id="slide-menu" class="slide-menu" aria-hidden="true">
-  <div class="slide-menu-header">
-    <div id="mobile-mode-switch" class="mode-toggle" aria-label="Toggle mobile dark/light">🌙</div>
-    <button id="mobile-search-toggle" class="icon" aria-label="Open mobile search">🔍</button>
-    <button id="mobile-slide-close" class="icon" aria-label="Close menu">&times;</button>
-  </div>
 
-  <ul class="slide-nav-links">
-    <!-- Regular clickable links -->
-    <li>
-      <a href="index.html" class="mobile-nav-link">HOME</a>
-    </li>
-    
-    <li>
-      <a href="index.html#grow" class="mobile-nav-link">GROW</a>
-    </li>
-    
-    <li>
-      <a href="index.html#products" class="mobile-nav-link">PRODUCTS</a>
-    </li>
-    
-    <li>
-      <a href="index.html#maison" class="mobile-nav-link">MAISON</a>
-    </li>
-    
-    <!-- Dropdown with clickable parent link -->
-    <li class="mobile-has-dropdown">
-      <div class="mobile-dropdown-header">
-        <a href="about.html" class="slide-menu-link">ABOUT</a>
-        <button class="mobile-dropdown-btn" aria-expanded="false" aria-controls="about-mobile-submenu">
-          <span class="dropdown-arrow"></span>
-        </button>
-      </div>
-      <ul class="mobile-dropdown-menu" id="about-mobile-submenu" aria-hidden="true">
-        <li><a href="about.html#story" class="slide-menu-link">Our Story</a></li>
-        <li><a href="about.html#values" class="slide-menu-link">Core Values</a></li>
-        <li><a href="contact.html#team" class="slide-menu-link">Our Team</a></li>
-        <li><a href="contact.html" class="slide-menu-link">Contact</a></li>
-      </ul>
-    </li>
-    
-    <li>
-      <a href="contact.html" class="mobile-nav-link">CONTACT</a>
-    </li>
-  </ul>
-</div>
+        <nav class="nav-bottom">
+            <ul class="nav-links-centered">
+                <li class="nav-item has-dropdown"><a href="index.html#grow">GROW ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="index.html#greenhouse">Greenhouse</a>
+                        <a href="index.html#orchard">Orchard</a>
+                        <a href="index.html#hydroponics">Hydroponics</a>
+                    </div>
+                </li>
+                <li class="nav-item has-dropdown"><a href="index.html#products">PRODUCTS ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="index.html#featured">Featured Produce</a>
+                        <a href="index.html#maison">Maison</a>
+                        <a href="index.html#shop">Shop All</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="index.html#maison">MAISON</a></li>
+                <li class="nav-item has-dropdown">
+                    <a href="about.html" class="nav-link dropdown-toggle">ABOUT ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="about.html#story">Our Story</a>
+                        <a href="about.html#values">Core Values</a>
+                        <a href="contact.html#team">Our Team</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MOBILE SLIDE MENU -->
+    <div id="slide-menu" class="slide-menu" aria-hidden="true">
+        <div class="slide-menu-header">
+            <div id="mobile-mode-switch" class="mode-toggle" aria-label="Toggle mobile dark/light">🌙</div>
+            <button id="mobile-search-toggle" class="icon" aria-label="Open mobile search">🔍</button>
+            <button id="mobile-slide-close" class="icon" aria-label="Close menu">&times;</button>
+        </div>
+
+        <ul class="slide-nav-links">
+            <li><a href="index.html" class="mobile-nav-link">HOME</a></li>
+            <li><a href="index.html#grow" class="mobile-nav-link">GROW</a></li>
+            <li><a href="index.html#products" class="mobile-nav-link">PRODUCTS</a></li>
+            <li><a href="index.html#maison" class="mobile-nav-link">MAISON</a></li>
+            
+            <li class="mobile-has-dropdown">
+                <div class="mobile-dropdown-header">
+                    <a href="about.html" class="slide-menu-link">ABOUT</a>
+                    <button class="mobile-dropdown-btn" aria-expanded="false" aria-controls="about-mobile-submenu">
+                        <span class="dropdown-arrow"></span>
+                    </button>
+                </div>
+                <ul class="mobile-dropdown-menu" id="about-mobile-submenu" aria-hidden="true">
+                    <li><a href="about.html#story" class="slide-menu-link">Our Story</a></li>
+                    <li><a href="about.html#values" class="slide-menu-link">Core Values</a></li>
+                    <li><a href="contact.html#team" class="slide-menu-link">Our Team</a></li>
+                    <li><a href="contact.html" class="slide-menu-link">Contact</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="contact.html" class="mobile-nav-link">CONTACT</a></li>
+        </ul>
+    </div>
 
     <main class="container section-padding">
         <div class="profile-header fade-in">
@@ -117,61 +168,98 @@
                 </ul>
             </div>
         </div>
+
+        <!-- CONTACT INFORMATION CARD -->
+        <section class="section-padding fade-in" style="padding-top: 60px;">
+            <div class="glass-panel" style="padding: 40px; max-width: 800px; margin: 0 auto;">
+                <h3 style="margin-bottom: 20px; font-size: 1.8rem; color: var(--gold);">Contact Information</h3>
+                
+                <div style="display: grid; gap: 25px;">
+                    <div class="info-item">
+                        <span class="icon-gold">📧</span>
+                        <div>
+                            <strong style="display: block; margin-bottom: 5px;">Email</strong>
+                            <a href="mailto:operationsdirector@riseupfarms.xyz" style="word-break: break-all; color: var(--white); text-decoration: none;">
+                                operationsdirector@riseupfarms.xyz
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="icon-gold">📞</span>
+                        <div>
+                            <strong style="display: block; margin-bottom: 5px;">Phone</strong>
+                            <a href="tel:0826121932" style="color: var(--white); text-decoration: none;">
+                                082 612 1932
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="icon-gold">⏰</span>
+                        <div>
+                            <strong style="display: block; margin-bottom: 5px;">Business Hours</strong>
+                            <p style="color: var(--muted); margin: 0;">
+                                Monday – Friday: 8:00 AM – 5:00 PM (SAST)<br>
+                                Saturday: 9:00 AM – 2:00 PM (SAST)<br>
+                                Sunday: Closed
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="footer" role="contentinfo" id="contact">
-      <div class="footer-container container">
-        <div class="footer-col">
-          <h4>Collections</h4>
-          <ul>
-            <li><a href="index.html#products">Produce</a></li>
-            <li><a href="index.html#maison">Maison</a></li>
-            <li><a href="index.html#shop">Shop</a></li>
-          </ul>
+    <footer class="footer" role="contentinfo">
+        <div class="footer-container container">
+            <div class="footer-col">
+                <h4>Collections</h4>
+                <ul>
+                    <li><a href="index.html#products">Produce</a></li>
+                    <li><a href="index.html#maison">Maison</a></li>
+                    <li><a href="index.html#shop">Shop</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Info</h4>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html#grow">Sustainability</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>RiseUp</h4>
+                <ul>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Invest</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Stay Connected</h4>
+                <p class="newsletter-text">Get field notes and early drops.</p>
+                <form class="newsletter-form" action="#" method="post">
+                    <input type="email" name="email" placeholder="Email address" aria-label="Email">
+                    <button type="submit">JOIN</button>
+                </form>
+                <div class="social-links">
+                    <a href="https://instagram.com/riseupfarms" target="_blank" aria-label="Instagram">
+                        <img src="https://img.icons8.com/ios-filled/50/D4AF37/instagram-new.png" alt="Instagram" class="social-icon">
+                    </a>
+                    <a href="https://tiktok.com/@riseupfarms" target="_blank" aria-label="TikTok">
+                        <img src="https://img.icons8.com/ios-filled/50/D4AF37/tiktok.png" alt="TikTok" class="social-icon">
+                    </a>
+                    <a href="https://facebook.com/riseupfarms" target="_blank" aria-label="Facebook">
+                        <img src="https://img.icons8.com/ios-filled/50/D4AF37/facebook-f.png" alt="Facebook" class="social-icon">
+                    </a>
+                </div>
+            </div>
         </div>
-    
-        <div class="footer-col">
-          <h4>Info</h4>
-          <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="index.html#grow">Sustainability</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+        <div class="footer-bottom">
+            <p>© 2026 RiseUp Farms. All rights reserved.</p>
         </div>
-    
-        <div class="footer-col">
-          <h4>RiseUp</h4>
-          <ul>
-            <li><a href="#">Press</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Invest</a></li>
-          </ul>
-        </div>
-    
-        <div class="footer-col">
-          <h4>Stay Connected</h4>
-          <p class="newsletter-text">Get field notes and early drops.</p>
-          <form class="newsletter-form" action="#" method="post">
-            <input type="email" name="email" placeholder="Email address" aria-label="Email">
-            <button type="submit">JOIN</button>
-          </form>
-          <div class="social-links">
-            <a href="https://instagram.com/riseupfarms" target="_blank" aria-label="Instagram">
-              <img src="https://img.icons8.com/ios-filled/50/D4AF37/instagram-new.png" alt="Instagram" class="social-icon">
-            </a>
-            <a href="https://tiktok.com/@riseupfarms" target="_blank" aria-label="TikTok">
-              <img src="https://img.icons8.com/ios-filled/50/D4AF37/tiktok.png" alt="TikTok" class="social-icon">
-            </a>
-            <a href="https://facebook.com/riseupfarms" target="_blank" aria-label="Facebook">
-              <img src="https://img.icons8.com/ios-filled/50/D4AF37/facebook-f.png" alt="Facebook" class="social-icon">
-            </a>
-          </div>
-        </div>
-      </div>
-    
-      <div class="footer-bottom">
-        <p>© 2026 RiseUp Farms. All rights reserved.</p>
-      </div>
     </footer>
 
     <script src="script.js"></script>

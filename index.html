@@ -6,48 +6,43 @@
   <title>RiseUp Farms — Futuristic Luxury Farm</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
-  
 </head>
 <body>
   <header class="navbar-split">
     <div id="search-bar-overlay" class="search-bar-overlay" aria-hidden="true">
       <div class="search-bar-container container">
-          
-          <div class="search-input-area">
-              <form class="search-bar-form" onsubmit="event.preventDefault();">
-                  <button type="submit" class="icon" aria-label="Submit Search">
-                    <img src="https://img.icons8.com/ios/50/D4AF37/search--v1.png" alt="Search" class="nav-icon-svg"></button>
-                  <input type="text" id="overlay-search-input" placeholder="Search RiseUp Farms..." autocomplete="off">
-              </form>
-              
-              <div class="search-hints">
-                  <p class="search-hint-title">POPULAR SEARCHES</p>
-                  <div class="search-hint-list">
-                      <a href="#" class="search-hint-item">Honey</a>
-                      <a href="#" class="search-hint-item">Microgreens</a>
-                      <a href="#" class="search-hint-item">Olive Oil</a>
-                      <a href="#" class="search-hint-item">Orchard</a>
-                  </div>
-              </div>
+        <div class="search-input-area">
+          <form class="search-bar-form" onsubmit="event.preventDefault();">
+            <button type="submit" class="icon" aria-label="Submit Search">
+              <img src="https://img.icons8.com/ios/50/D4AF37/search--v1.png" alt="Search" class="nav-icon-svg">
+            </button>
+            <input type="text" id="overlay-search-input" placeholder="Search RiseUp Farms..." autocomplete="off">
+          </form>
+          <div class="search-hints">
+            <p class="search-hint-title">POPULAR SEARCHES</p>
+            <div class="search-hint-list">
+              <a href="#maison" class="search-hint-item">Honey</a>
+              <a href="#products" class="search-hint-item">Microgreens</a>
+              <a href="#shop" class="search-hint-item">Olive Oil</a>
+              <a href="#maison" class="search-hint-item">Orchard</a>
+            </div>
           </div>
-          
-          <button id="search-bar-close" class="icon" aria-label="Close Search">&times;</button>
+        </div>
+        <button id="search-bar-close" class="icon" aria-label="Close Search">&times;</button>
       </div>
-  </div>
+    </div>
+
     <div class="nav-top container">
       <div class="nav-left">
-  <button id="mobile-menu-toggle" class="icon hamburger" aria-label="Open menu">
-    <span></span><span></span><span></span>
-  </button>
-  <button id="search-toggle" class="icon" aria-label="Search">
-    <img src="https://img.icons8.com/ios/50/D4AF37/search--v1.png" alt="Search" class="nav-icon-svg">
-  </button> 
-</div>
-
-    
-   
+        <button id="mobile-menu-toggle" class="icon hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+        <button id="search-toggle" class="icon" aria-label="Search">
+          <img src="https://img.icons8.com/ios/50/D4AF37/search--v1.png" alt="Search" class="nav-icon-svg">
+        </button> 
+      </div>
+      
       <div class="nav-center-logo">
         <a href="#hero" aria-label="Go to homepage"> 
           <img src="logo rise.png" alt="RiseUp Farms" class="logo-img" loading="lazy">
@@ -55,19 +50,20 @@
       </div>
   
       <div class="nav-right">
-  <div class="mode-toggle">
-    <button id="mode-switch" aria-label="Toggle dark/light mode">
-      <img src="https://img.icons8.com/ios/50/D4AF37/moon-symbol.png" alt="Mode" class="nav-icon-svg">
-    </button>
-  </div>
-  <button class="icon" aria-label="Account">
-    <img src="https://img.icons8.com/ios/50/D4AF37/user-male-circle.png" alt="Account" class="nav-icon-svg">
-  </button>
-  <button class="icon" aria-label="Cart">
-    <img src="https://img.icons8.com/ios/50/D4AF37/shopping-bag.png" alt="Cart" class="nav-icon-svg">
-  </button>
-</div>
-
+        <div class="mode-toggle">
+          <button id="mode-switch" aria-label="Toggle dark/light mode">
+            <img src="https://img.icons8.com/ios/50/D4AF37/moon-symbol.png" alt="Mode" class="nav-icon-svg">
+          </button>
+        </div>
+        <button class="icon" aria-label="Account">
+          <img src="https://img.icons8.com/ios/50/D4AF37/user-male-circle.png" alt="Account" class="nav-icon-svg">
+        </button>
+        <button class="icon cart-icon-btn" aria-label="Cart" onclick="toggleCart()">
+          <img src="https://img.icons8.com/ios/50/D4AF37/shopping-bag.png" alt="Cart" class="nav-icon-svg">
+          <span id="cart-badge" class="cart-badge">0</span>
+        </button>
+      </div>
+    </div>
   
     <nav class="nav-bottom">
       <ul class="nav-links-centered">
@@ -85,148 +81,114 @@
             <a href="#shop">Shop All</a>
           </div>
         </li>
-        
         <li class="nav-item has-dropdown">
-  <a href="about.html" class="nav-link dropdown-toggle">ABOUT ▾</a>
-  
-  <div class="dropdown-menu">
-    <a href="about.html#story">Our Story</a>
-    <a href="about.html#values">Core Values</a>
-    <a href="contact.html#team">Our Team</a> 
-    <a href="contact.html">Contact</a>
-  </div>
-</li>
-
-        
-        <li class="nav-item"><a href="#maison">MAISON</a></li>
-       <li class="nav-item has-dropdown">
+          <a href="about.html" class="nav-link dropdown-toggle">ABOUT ▾</a>
           <div class="dropdown-menu">
-            <a href="#story">Our Story</a>
-            <a href="#sustainability">Sustainability</a>
-            <a href="#team">Team</a>
+            <a href="about.html#story">Our Story</a>
+            <a href="about.html#values">Core Values</a>
+            <a href="contact.html#team">Our Team</a> 
+            <a href="contact.html">Contact</a>
           </div>
         </li>
+        <li class="nav-item"><a href="#maison">MAISON</a></li>
         <li class="nav-item"><a href="contact.html">CONTACT</a></li>
       </ul>
     </nav>
   </header>
-<!-- MOBILE SLIDE MENU - Replace in ALL HTML files -->
-<div id="slide-menu" class="slide-menu" aria-hidden="true">
-  <div class="slide-menu-header">
-    <div id="mobile-mode-switch" class="mode-toggle" aria-label="Toggle mobile dark/light">🌙</div>
-    <button id="mobile-search-toggle" class="icon" aria-label="Open mobile search">🔍</button>
-    <button id="mobile-slide-close" class="icon" aria-label="Close menu">&times;</button>
-  </div>
 
-  <ul class="slide-nav-links">
-    <!-- Regular clickable links -->
-    <li>
-      <a href="index.html" class="mobile-nav-link">HOME</a>
-    </li>
-    
-    <li>
-      <a href="index.html#grow" class="mobile-nav-link">GROW</a>
-    </li>
-    
-    <li>
-      <a href="index.html#products" class="mobile-nav-link">PRODUCTS</a>
-    </li>
-    
-    <li>
-      <a href="index.html#maison" class="mobile-nav-link">MAISON</a>
-    </li>
-    
-    <!-- Dropdown with clickable parent link -->
-    <li class="mobile-has-dropdown">
-      <div class="mobile-dropdown-header">
-        <a href="about.html" class="slide-menu-link">ABOUT</a>
-        <button class="mobile-dropdown-btn" aria-expanded="false" aria-controls="about-mobile-submenu">
-          <span class="dropdown-arrow"></span>
-        </button>
-      </div>
-      <ul class="mobile-dropdown-menu" id="about-mobile-submenu" aria-hidden="true">
-        <li><a href="about.html#story" class="slide-menu-link">Our Story</a></li>
-        <li><a href="about.html#values" class="slide-menu-link">Core Values</a></li>
-        <li><a href="contact.html#team" class="slide-menu-link">Our Team</a></li>
-        <li><a href="contact.html" class="slide-menu-link">Contact</a></li>
-      </ul>
-    </li>
-    
-    <li>
-      <a href="contact.html" class="mobile-nav-link">CONTACT</a>
-    </li>
-  </ul>
-</div>
-<!-- END: Mobile slide menu -->
-
-
-
-<section class="hero-full" id="hero" aria-label="Hero — RiseUp Farms">
-  <div class="hero-media">
-    <img src="sprawling agricultural farm.jpg" alt="RiseUp Farms landscape" class="hero-img">
-    <div class="hero-gradient"></div>
-  </div>
-
-  <div class="hero-overlay container">
-    <p class="hero-year">RISEUP / 2026</p>
-    <h1 class="hero-title">Cultivating <span class="accent">Tomorrow</span></h1>
-    <p class="hero-sub">Futuristic farms. Sustainable luxury. Born from earth, elevated by design.</p>
-
-    <div class="hero-buttons">
-      <a class="pill-btn" href="#grow">EXPLORE GROW</a>
-      <a class="pill-btn" href="#products">SHOP PRODUCE</a>
+  <div id="slide-menu" class="slide-menu" aria-hidden="true">
+    <div class="slide-menu-header">
+      <div id="mobile-mode-switch" class="mode-toggle" aria-label="Toggle mobile dark/light">🌙</div>
+      <button id="mobile-search-toggle" class="icon" aria-label="Open mobile search">🔍</button>
+      <button id="mobile-slide-close" class="icon" aria-label="Close menu">&times;</button>
     </div>
+
+    <ul class="slide-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">HOME</a></li>
+      <li><a href="#grow" class="mobile-nav-link">GROW</a></li>
+      <li><a href="#products" class="mobile-nav-link">PRODUCTS</a></li>
+      <li><a href="#maison" class="mobile-nav-link">MAISON</a></li>
+      
+      <li class="mobile-has-dropdown">
+        <div class="mobile-dropdown-header">
+          <a href="about.html" class="slide-menu-link">ABOUT</a>
+          <button class="mobile-dropdown-btn" aria-expanded="false" aria-controls="about-mobile-submenu">
+            <span class="dropdown-arrow"></span>
+          </button>
+        </div>
+        <ul class="mobile-dropdown-menu" id="about-mobile-submenu" aria-hidden="true">
+          <li><a href="about.html#story" class="slide-menu-link">Our Story</a></li>
+          <li><a href="about.html#values" class="slide-menu-link">Core Values</a></li>
+          <li><a href="contact.html#team" class="slide-menu-link">Our Team</a></li>
+          <li><a href="contact.html" class="slide-menu-link">Contact</a></li>
+        </ul>
+      </li>
+      
+      <li><a href="contact.html" class="mobile-nav-link">CONTACT</a></li>
+    </ul>
   </div>
-</section>
 
+  <section class="hero-full" id="hero" aria-label="Hero — RiseUp Farms">
+    <div class="hero-media">
+      <img src="sprawling agricultural farm.jpg" alt="RiseUp Farms landscape" class="hero-img">
+      <div class="hero-gradient"></div>
+    </div>
 
-<section class="featured section-padding fade-right" id="products">
-  <h2 class="section-title">Featured Produce</h2>
+    <div class="hero-overlay container">
+      <p class="hero-year">RISEUP / 2026</p>
+      <h1 class="hero-title">Cultivating <span class="accent">Tomorrow</span></h1>
+      <p class="hero-sub">Futuristic farms. Sustainable luxury. Born from earth, elevated by design.</p>
 
-  <div class="featured-produce-slider">
-      <div class="featured-produce-track">
-
-          <article class="featured-card">
-              <div class="featured-img"><img src="harvestboxes.jpg" alt="Harvest box"></div>
-              <h3>Harvest Boxes</h3>
-              <p class="muted">Seasonal curated produce</p>
-          </article>
-
-          <article class="featured-card">
-              <div class="featured-img"><img src="Microgreenss.jpg" alt="Microgreens"></div>
-              <h3>Microgreens</h3>
-              <p class="muted">Ultra-fresh microbatches</p>
-          </article>
-
-          <article class="featured-card">
-              <div class="featured-img"><img src="oil.jpg" alt="Cold-pressed oil"></div>
-              <h3>Cold-Pressed Oil</h3>
-              <p class="muted">Single-estate, small press</p>
-          </article>
-          
-          <article class="featured-card">
-              <div class="featured-img"><img src="Heirloom Tomatoes.jpg" alt="Heirloom Tomatoes"></div>
-              <h3>Heirloom Tomatoes</h3>
-              <p class="muted">Limited summer edition</p>
-          </article>
-
-          <article class="featured-card">
-              <div class="featured-img"><img src="Culinary Herb.jpg" alt="Fresh Herb Collection"></div>
-              <h3>Fresh Herb Collection</h3>
-              <p class="muted">Chef's selection bouquet</p>
-          </article>
-
-          <article class="featured-card">
-              <div class="featured-img"><img src="spices.jpg" alt="Artisan Spices"></div>
-              <h3>Artisan Spices</h3>
-              <p class="muted">Rare, hand-ground blends</p>
-          </article>
-
+      <div class="hero-buttons">
+        <a class="pill-btn" href="#grow">EXPLORE GROW</a>
+        <a class="pill-btn" href="#products">SHOP PRODUCE</a>
       </div>
-  </div>
+    </div>
+  </section>
 
-</section>
+  <section class="featured section-padding fade-right" id="products">
+    <h2 class="section-title">Featured Produce</h2>
 
+    <div class="featured-produce-slider">
+      <div class="featured-produce-track">
+        <article class="featured-card">
+          <div class="featured-img"><img src="harvestboxes.jpg" alt="Harvest box"></div>
+          <h3>Harvest Boxes</h3>
+          <p class="muted">Seasonal curated produce</p>
+        </article>
+
+        <article class="featured-card">
+          <div class="featured-img"><img src="Microgreenss.jpg" alt="Microgreens"></div>
+          <h3>Microgreens</h3>
+          <p class="muted">Ultra-fresh microbatches</p>
+        </article>
+
+        <article class="featured-card">
+          <div class="featured-img"><img src="oil.jpg" alt="Cold-pressed oil"></div>
+          <h3>Cold-Pressed Oil</h3>
+          <p class="muted">Single-estate, small press</p>
+        </article>
+        
+        <article class="featured-card">
+          <div class="featured-img"><img src="Heirloom Tomatoes.jpg" alt="Heirloom Tomatoes"></div>
+          <h3>Heirloom Tomatoes</h3>
+          <p class="muted">Limited summer edition</p>
+        </article>
+
+        <article class="featured-card">
+          <div class="featured-img"><img src="Culinary Herb.jpg" alt="Fresh Herb Collection"></div>
+          <h3>Fresh Herb Collection</h3>
+          <p class="muted">Chef's selection bouquet</p>
+        </article>
+
+        <article class="featured-card">
+          <div class="featured-img"><img src="spices.jpg" alt="Artisan Spices"></div>
+          <h3>Artisan Spices</h3>
+          <p class="muted">Rare, hand-ground blends</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
   <section class="maison section-padding fade-left" id="maison">
     <h2 class="section-title">Explore the Maison's Collections</h2>
@@ -261,32 +223,38 @@
         <div class="maison-img"><img src="vineyard.jpg" alt="Vineyard"></div>
         <h3>Vineyard</h3>
       </div>
-      
     </div>
   </section>
   
- <section class="cinematic-banner" id="groceries">
-  <div class="banner-media">
-    <img src="banner.jpg" alt="Cinematic Banner" class="banner-img">
-  </div>
-  <div class="banner-overlay">
-    <h2 class="banner-title">Groceries</h2>
-    <div class="banner-buttons">
-      <a href="#fresh" class="banner-btn">Fresh</a>
-      <a href="#cold" class="banner-btn">Cold</a>
+  <section class="cinematic-banner" id="groceries">
+    <div class="banner-media">
+      <img src="banner.jpg" alt="Cinematic Banner" class="banner-img">
     </div>
-  </div>
-</section>
-
+    <div class="banner-overlay">
+      <h2 class="banner-title">Groceries</h2>
+      <div class="banner-buttons">
+        <a href="#fresh" class="banner-btn">Fresh</a>
+        <a href="#cold" class="banner-btn">Cold</a>
+      </div>
+    </div>
+  </section>
 
   <section class="just-dropped section-padding zoom" id="shop">
     <h2 class="section-title">Just Dropped</h2>
     <div class="grid-4 stagger">
+      
       <div class="product-card">
         <div class="product-img-box"><img src="greenhouse.jpg" alt="Premium Honey"></div>
         <div class="product-details">
           <h3 class="p-name">Premium Honey</h3>
-          <p class="p-price">$22.00</p>
+          <p class="p-price">R22.00</p>
+          <button 
+            class="add-to-cart-btn pill-btn"
+            data-id="honey-001"
+            data-name="Premium Honey"
+            data-price="22.00">
+            Add to Cart
+          </button>
         </div>
       </div>
   
@@ -294,7 +262,14 @@
         <div class="product-img-box"><img src="signature olive oil.jpg" alt="Signature Olive Oil"></div>
         <div class="product-details">
           <h3 class="p-name">Signature Oil</h3>
-          <p class="p-price">$45.00</p>
+          <p class="p-price">R45.00</p>
+          <button 
+            class="add-to-cart-btn pill-btn"
+            data-id="oil-002"
+            data-name="Signature Oil"
+            data-price="45.00">
+            Add to Cart
+          </button>
         </div>
       </div>
   
@@ -302,7 +277,14 @@
         <div class="product-img-box"><img src="seeds.jpg" alt="Heirloom Seeds"></div>
         <div class="product-details">
           <h3 class="p-name">Heirloom Seeds</h3>
-          <p class="p-price">$12.00</p>
+          <p class="p-price">R12.00</p>
+          <button 
+            class="add-to-cart-btn pill-btn"
+            data-id="seeds-003"
+            data-name="Heirloom Seeds"
+            data-price="12.00">
+            Add to Cart
+          </button>
         </div>
       </div>
   
@@ -310,7 +292,14 @@
         <div class="product-img-box"><img src="Microgreens Kit.jpg" alt="Microgreen Kit"></div>
         <div class="product-details">
           <h3 class="p-name">Microgreen Kit</h3>
-          <p class="p-price">$39.00</p>
+          <p class="p-price">R39.00</p>
+          <button 
+            class="add-to-cart-btn pill-btn"
+            data-id="micro-004"
+            data-name="Microgreen Kit"
+            data-price="39.00">
+            Add to Cart
+          </button>
         </div>
       </div>
       
@@ -318,7 +307,14 @@
         <div class="product-img-box"><img src="veges.jpg" alt="Seasonal Greens"></div>
         <div class="product-details">
           <h3 class="p-name">Seasonal Greens</h3>
-          <p class="p-price">$18.00</p>
+          <p class="p-price">R18.00</p>
+          <button 
+            class="add-to-cart-btn pill-btn"
+            data-id="greens-005"
+            data-name="Seasonal Greens"
+            data-price="18.00">
+            Add to Cart
+          </button>
         </div>
       </div>
       
@@ -326,10 +322,18 @@
         <div class="product-img-box"><img src="Bouquet.jpg" alt="Fresh Herb Bouquet"></div>
         <div class="product-details">
           <h3 class="p-name">Herb Bouquet</h3>
-          <p class="p-price">$15.00</p>
+          <p class="p-price">R15.00</p>
+          <button 
+            class="add-to-cart-btn pill-btn"
+            data-id="herbs-006"
+            data-name="Herb Bouquet"
+            data-price="15.00">
+            Add to Cart
+          </button>
         </div>
       </div>
-  </div>
+    </div>
+    
     <div class="shop-all-container">
       <a href="#products" class="shop-all-btn">Shop All</a>
     </div>
@@ -349,9 +353,9 @@
       <div class="footer-col">
         <h4>Info</h4>
         <ul>
-          <li><a href="#about">About</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="#grow">Sustainability</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
   
@@ -372,17 +376,16 @@
           <button type="submit">JOIN</button>
         </form>
         <div class="social-links">
-  <a href="https://instagram.com/riseupfarms" target="_blank" aria-label="Instagram">
-    <img src="https://img.icons8.com/ios-filled/50/D4AF37/instagram-new.png" alt="Instagram" class="social-icon">
-  </a>
-  <a href="https://tiktok.com/@riseupfarms" target="_blank" aria-label="TikTok">
-    <img src="https://img.icons8.com/ios-filled/50/D4AF37/tiktok.png" alt="TikTok" class="social-icon">
-  </a>
-  <a href="https://facebook.com/riseupfarms" target="_blank" aria-label="Facebook">
-    <img src="https://img.icons8.com/ios-filled/50/D4AF37/facebook-f.png" alt="Facebook" class="social-icon">
-  </a>
-</div>
-        
+          <a href="https://instagram.com/riseupfarms" target="_blank" aria-label="Instagram">
+            <img src="https://img.icons8.com/ios-filled/50/D4AF37/instagram-new.png" alt="Instagram" class="social-icon">
+          </a>
+          <a href="https://tiktok.com/@riseupfarms" target="_blank" aria-label="TikTok">
+            <img src="https://img.icons8.com/ios-filled/50/D4AF37/tiktok.png" alt="TikTok" class="social-icon">
+          </a>
+          <a href="https://facebook.com/riseupfarms" target="_blank" aria-label="Facebook">
+            <img src="https://img.icons8.com/ios-filled/50/D4AF37/facebook-f.png" alt="Facebook" class="social-icon">
+          </a>
+        </div>
       </div>
     </div>
   
@@ -390,7 +393,260 @@
       <p>© 2026 RiseUp Farms. All rights reserved.</p>
     </div>
   </footer>
-  <script src="script.js"></script>
 
-  </body>
-  </html>
+  <!-- ==================== AUTHENTICATION MODAL ==================== -->
+  <div id="auth-modal" class="auth-modal">
+    <div class="auth-modal-content">
+      <button id="close-auth-modal" class="close-auth-btn">&times;</button>
+      
+      <!-- Sign In Form -->
+      <div id="signin-form" class="auth-form active">
+        <div class="auth-header">
+          <h2>Welcome Back! 👋</h2>
+          <p class="auth-subtitle">Sign in to continue shopping</p>
+        </div>
+        
+        <form id="signin-form-element" class="auth-form-fields">
+          <div class="form-group">
+            <label for="signin-email">Email Address</label>
+            <input 
+              type="email" 
+              id="signin-email" 
+              placeholder="your.email@example.com" 
+              required
+              autocomplete="email"
+            >
+          </div>
+          
+          <div class="form-group">
+            <label for="signin-password">Password</label>
+            <input 
+              type="password" 
+              id="signin-password" 
+              placeholder="Enter your password" 
+              required
+              autocomplete="current-password"
+            >
+          </div>
+          
+          <div class="form-options">
+            <label class="checkbox-label">
+              <input type="checkbox" id="remember-me">
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="forgot-password" onclick="showNotification('Password reset coming soon!', 'info'); return false;">Forgot password?</a>
+          </div>
+          
+          <button type="submit" class="pill-btn auth-submit-btn">
+            Sign In
+          </button>
+        </form>
+        
+        <div class="auth-divider">
+          <span>or continue with</span>
+        </div>
+        
+        <div class="social-auth-buttons">
+          <button class="social-btn" onclick="showComingSoon('Google')">
+            <img src="https://img.icons8.com/color/48/google-logo.png" alt="Google" width="20">
+            Google
+          </button>
+          <button class="social-btn" onclick="showComingSoon('Facebook')">
+            <img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook" width="20">
+            Facebook
+          </button>
+        </div>
+        
+        <p class="auth-switch">
+          Don't have an account? 
+          <a href="#" id="switch-to-signup">Sign Up</a>
+        </p>
+      </div>
+      
+      <!-- Sign Up Form -->
+      <div id="signup-form" class="auth-form">
+        <div class="auth-header">
+          <h2>Join RiseUp Farms 🌱</h2>
+          <p class="auth-subtitle">Create your account to get started</p>
+        </div>
+        
+        <form id="signup-form-element" class="auth-form-fields">
+          <div class="form-group">
+            <label for="signup-name">Full Name</label>
+            <input 
+              type="text" 
+              id="signup-name" 
+              placeholder="John Doe" 
+              required
+              autocomplete="name"
+            >
+          </div>
+          
+          <div class="form-group">
+            <label for="signup-email">Email Address</label>
+            <input 
+              type="email" 
+              id="signup-email" 
+              placeholder="your.email@example.com" 
+              required
+              autocomplete="email"
+            >
+          </div>
+          
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input 
+              type="password" 
+              id="signup-password" 
+              placeholder="At least 8 characters" 
+              required
+              autocomplete="new-password"
+              minlength="8"
+            >
+          </div>
+          
+          <div class="form-group">
+            <label for="signup-confirm-password">Confirm Password</label>
+            <input 
+              type="password" 
+              id="signup-confirm-password" 
+              placeholder="Re-enter your password" 
+              required
+              autocomplete="new-password"
+              minlength="8"
+            >
+          </div>
+          
+          <label class="checkbox-label terms-checkbox">
+            <input type="checkbox" id="terms-agree" required>
+            <span>I agree to the <a href="#" onclick="showNotification('Terms & Conditions coming soon!', 'info'); return false;">Terms & Conditions</a></span>
+          </label>
+          
+          <button type="submit" class="pill-btn auth-submit-btn">
+            Create Account
+          </button>
+        </form>
+        
+        <div class="auth-divider">
+          <span>or sign up with</span>
+        </div>
+        
+        <div class="social-auth-buttons">
+          <button class="social-btn" onclick="showComingSoon('Google')">
+            <img src="https://img.icons8.com/color/48/google-logo.png" alt="Google" width="20">
+            Google
+          </button>
+          <button class="social-btn" onclick="showComingSoon('Facebook')">
+            <img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook" width="20">
+            Facebook
+          </button>
+        </div>
+        
+        <p class="auth-switch">
+          Already have an account? 
+          <a href="#" id="switch-to-signin">Sign In</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Auth Modal Overlay -->
+  <!-- ==================== STEP 2: USER PROFILE DROPDOWN ==================== -->
+<!-- Add this RIGHT AFTER the auth modal overlay in ALL HTML files -->
+
+<div id="user-profile-dropdown" class="user-profile-dropdown">
+  <div class="profile-dropdown-header">
+    <div class="profile-avatar">
+      <span id="profile-avatar-initial">U</span>
+    </div>
+    <div class="profile-info">
+      <h4 id="profile-name">User Name</h4>
+      <p id="profile-email">user@example.com</p>
+    </div>
+  </div>
+
+  <div class="profile-dropdown-divider"></div>
+
+  <div class="profile-stats">
+    <div class="profile-stat-item">
+      <span class="stat-icon">🛒</span>
+      <div class="stat-info">
+        <span class="stat-label">Cart Items</span>
+        <span id="profile-cart-count" class="stat-value">0</span>
+      </div>
+    </div>
+    
+    <div class="profile-stat-item">
+      <span class="stat-icon">📦</span>
+      <div class="stat-info">
+        <span class="stat-label">Orders</span>
+        <span class="stat-value">0</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="profile-dropdown-divider"></div>
+
+  <div class="profile-menu">
+    <a href="#" class="profile-menu-item" onclick="showNotification('Profile coming soon!', 'info'); return false;">
+      <span class="menu-icon">👤</span>
+      <span>My Profile</span>
+    </a>
+    
+    <a href="#" class="profile-menu-item" onclick="showNotification('Orders coming soon!', 'info'); return false;">
+      <span class="menu-icon">📋</span>
+      <span>My Orders</span>
+    </a>
+    
+    <a href="#" class="profile-menu-item" onclick="showNotification('Settings coming soon!', 'info'); return false;">
+      <span class="menu-icon">⚙️</span>
+      <span>Settings</span>
+    </a>
+  </div>
+
+  <div class="profile-dropdown-divider"></div>
+
+  <button class="profile-logout-btn" onclick="signOut()">
+    <span class="menu-icon">🚪</span>
+    <span>Sign Out</span>
+  </button>
+</div>
+  <div id="auth-overlay" class="auth-overlay"></div>
+
+  <!-- SHOPPING CART SIDEBAR -->
+  <div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button id="close-cart" class="close-cart-btn">&times;</button>
+    </div>
+    
+    <div id="empty-cart-message" class="empty-cart">
+      <div class="empty-cart-icon">🛒</div>
+      <p>Your cart is empty</p>
+      <button onclick="toggleCart()" class="pill-btn">Continue Shopping</button>
+    </div>
+    
+    <div id="cart-items" class="cart-items">
+      <!-- Cart items will be inserted here by JavaScript -->
+    </div>
+    
+    <div id="cart-footer" class="cart-footer">
+      <div class="cart-total-row">
+        <span>Subtotal:</span>
+        <span id="cart-total" class="cart-total-amount">R0.00</span>
+      </div>
+      <button id="checkout-btn" class="pill-btn" style="width: 100%; margin-top: 15px;">
+        Proceed to Checkout
+      </button>
+      <button onclick="toggleCart()" class="pill-btn gold-variant" style="width: 100%; margin-top: 10px;">
+        Continue Shopping
+      </button>
+    </div>
+  </div>
+
+  <!-- CART OVERLAY -->
+  <div id="cart-overlay" class="cart-overlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
