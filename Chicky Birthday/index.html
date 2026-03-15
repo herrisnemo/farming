@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, My Love</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Beautiful Romantic Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Romantic Background Elements -->
+    <div id="hearts-container"></div>
+
+    <!-- Password Screen -->
+    <div id="password-overlay" class="password-overlay">
+        <div class="password-box pulse-glow">
+            <div class="lock-icon">🔒</div>
+            <h2>Unlock My Heart</h2>
+            <p>Only the girl who holds my heart knows the key...</p>
+            <input type="password" id="password-input" placeholder="Enter your name (Chicky)">
+            <button onclick="checkPassword()">Open</button>
+            <p id="error-message" style="color: #ff4d6d; display: none; margin-top: 10px;">That's not my girl. Try again.</p>
+        </div>
+    </div>
+
+    <!-- Hidden popups -->
+    <div id="success-popup" class="popup">
+        <div class="popup-inner">
+            <div class="popup-message"></div>
+        </div>
+    </div>
+
+    <div id="main-content" style="display: none;">
+        <!-- Hidden interactive trackers for her to find -->
+        <div id="tracker1" class="hidden-tracker" onclick="trackerClick(1)">✨</div>
+        <div id="tracker2" class="hidden-tracker" onclick="trackerClick(2)">💖</div>
+
+        <section id="hero">
+            <div class="hero-content glass-panel">
+                <h1 class="typewriter">Happy Birthday, Chicky <span class="heart heartbeat">❤️</span></h1>
+                <h3 class="cursive-text fade-in delay-1">The day the world became a better place...</h3>
+                <p class="fade-in delay-2">Today is all about you. The light you bring to my life, the warmth of your smile, and the beautiful soul I fell in love with.</p>
+                <button class="fade-in delay-3 bounce" onclick="startCelebration()">Step Into Our World 🌹</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
